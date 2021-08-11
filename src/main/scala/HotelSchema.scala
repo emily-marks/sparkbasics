@@ -1,4 +1,4 @@
-case class Hotel (
+case class HotelSchema(
   id: Long,
   name: String,
   country: String,

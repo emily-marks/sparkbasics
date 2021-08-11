@@ -5,6 +5,7 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.catalyst.ScalaReflection
 import org.apache.spark.sql.functions.{avg, col, udf}
 import org.apache.spark.sql.types.StructType
+import structure.{Geocode, Hotel, Weather}
 
 import java.util.Locale
 import scala.concurrent.Await
@@ -12,43 +13,40 @@ import scala.concurrent.duration.DurationInt
 import scala.io.Source
 
 object SparkApp extends App {
+  val azureStorageConfig = getConfig(System.getenv("AZURE_STORAGE_PROPERTIES"))
+  val hotelsSchema = ScalaReflection.schemaFor[HotelSchema].dataType.asInstanceOf[StructType]
+  val client = new OpenCageClient(System.getenv("OPEN_CAGE_KEY"))
+
   val sparkSession = SparkSession.builder()
     .master("local[*]")
     .appName("Weather by Hotels Provider")
-    .config(getAuthConfig("src\\main\\resources\\config\\azure-account-auth.properties")) //todo to environment variable
+    .config(getAuthConfig(System.getenv("AZURE_ACCOUNT_AUTH_PROPERTIES")))
     .getOrCreate()
-
-  val azureStorageConfig = getConfig("src\\main\\resources\\config\\azure-storage.properties")
-
-  val hotelsSchema = ScalaReflection.schemaFor[Hotel].dataType.asInstanceOf[StructType]
   val hotelsDf = sparkSession.read.schema(hotelsSchema).csv(azureStorageConfig("hotels"))
   val weatherDf = sparkSession.read.parquet(azureStorageConfig("weather"))
-  val client = new OpenCageClient(System.getenv("OPEN_CAGE_KEY"))
 
   try {
-    val latitudeCol = col("latitude")
-    val longitudeCol = col("longitude")
-
     val geoHashUdf = udf(geoHash _)
     val geoCodeUdf = udf(geoCode _)
 
-    val correctRows =
-      hotelsDf.filter(latitudeCol.isNotNull && longitudeCol.isNotNull)
-        .withColumn("geohash", geoHashUdf(latitudeCol, longitudeCol))
+    val correctHotelRows =
+      hotelsDf.filter(col(Hotel.latitude).isNotNull && col(Hotel.longitude).isNotNull)
+        .withColumn(Hotel.geohash, geoHashUdf(col(Hotel.latitude), col(Hotel.longitude)))
 
-    val fixedIncorrectRows =
-      hotelsDf.filter(col("id").isNotNull && (latitudeCol.isNull || longitudeCol.isNull))
-        .withColumn("coordinates", geoCodeUdf(col("country"), col("city"), col("address")))
-        .withColumn("latitude", col("coordinates").getField("lat"))
-        .withColumn("longitude", col("coordinates").getField("lng"))
-        .withColumn("geohash", geoHashUdf(latitudeCol, longitudeCol))
-        .drop("coordinates")
+    val fixedIncorrectHotelRows =
+      hotelsDf.filter(col(Hotel.id).isNotNull && (col(Hotel.latitude).isNull || col(Hotel.longitude).isNull))
+        .withColumn(Hotel.coordinates, geoCodeUdf(col(Hotel.country), col(Hotel.city), col(Hotel.address)))
+        .withColumn(Hotel.latitude, col(Hotel.coordinates).getField(Geocode.latitude))
+        .withColumn(Hotel.longitude, col(Hotel.coordinates).getField(Geocode.longitude))
+        .withColumn(Hotel.geohash, geoHashUdf(col(Hotel.latitude), col(Hotel.longitude)))
+        .drop(Hotel.coordinates)
 
-    val enrichedHotels = correctRows.union(fixedIncorrectRows)
-    val enrichedWeather = weatherDf.withColumn("geohash", geoHashUdf(col("lat"), col("lng")))
-      .groupBy("geohash").agg(avg(col("avg_tmpr_f")), avg(col("avg_tmpr_c")))
+    val enrichedHotels = correctHotelRows.union(fixedIncorrectHotelRows)
 
-    val join = enrichedHotels.join(enrichedWeather, enrichedWeather("geohash") === enrichedHotels("geohash"), "left")
+    val enrichedWeather = weatherDf.withColumn(Weather.geohash, geoHashUdf(col(Weather.latitude), col(Weather.longitude)))
+      .groupBy(Weather.geohash).agg(avg(col(Weather.avgTempF)), avg(col(Weather.avgTempC)))
+
+    val join = enrichedHotels.join(enrichedWeather, enrichedWeather(Weather.geohash) === enrichedHotels(Hotel.geohash), "left")
     //    println("should be 2499 : " + join.count())
   }
   finally {
