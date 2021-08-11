@@ -7,10 +7,11 @@ import org.apache.spark.sql.functions.{avg, col, udf}
 import org.apache.spark.sql.types.StructType
 import structure.{Geocode, Hotel, Weather}
 
+import java.nio.charset.CodingErrorAction
 import java.util.Locale
 import scala.concurrent.Await
 import scala.concurrent.duration.DurationInt
-import scala.io.Source
+import scala.io.{BufferedSource, Codec, Source}
 
 object SparkApp extends App {
   val azureStorageConfig = getConfig(System.getenv("AZURE_STORAGE_PROPERTIES"))
@@ -44,57 +45,101 @@ object SparkApp extends App {
     val enrichedHotels = correctHotelRows.union(fixedIncorrectHotelRows)
 
     val enrichedWeather = weatherDf.withColumn(Weather.geohash, geoHashUdf(col(Weather.latitude), col(Weather.longitude)))
-      .groupBy(Weather.geohash).agg(avg(col(Weather.avgTempF)), avg(col(Weather.avgTempC)))
+      .groupBy(Weather.geohash).agg(avg(col(Weather.avgTempF)).as("avgTempF"), avg(col(Weather.avgTempC)).as("avgTempC"))
 
-    val join = enrichedHotels.join(enrichedWeather, enrichedWeather(Weather.geohash) === enrichedHotels(Hotel.geohash), "left")
+    val join = enrichedHotels.join(enrichedWeather, enrichedWeather(Weather.geohash) === enrichedHotels(Hotel.geohash), "left").drop(Weather.geohash)
     //    println("should be 2499 : " + join.count())
+//    join.write.parquet("\\src\\main\\resources\\resultDf.parquet")
   }
   finally {
     client.close()
     sparkSession.stop()
   }
 
-  private def getAuthConfig(path: String): SparkConf = {
-    val configFile = Source.fromFile(path)
+  /**
+   * Transform property file to SparkConf
+   * @param path path to property file
+   * @return SparkConf with map of  fs.azure.account.*  properties
+   */
+  def getAuthConfig(path: String): SparkConf = {
+    val configFile: BufferedSource = Source.fromFile("src\\main\\resources\\config\\azure-account-auth.properties")
     try {
-      new SparkConf().setAll(
-        configFile.getLines.map {
-          line =>
-            val split = line.split("=")
-            split(0) -> split(1)
-        }.toIterable)
+      new SparkConf().setAll(toKeyValueConfigIterator(configFile).toIterable)
     } finally {
       configFile.close()
     }
   }
 
-  private def getConfig(path: String): Map[String, String] = {
-    val configFile = Source.fromFile(path)
+  /**
+   * Transform property file to Map
+   * @param path path to property file
+   * @return Map of required Azure properties
+   */
+  def getConfig(path: String): Map[String, String] = {
+//    val decoder = Codec.UTF8.decoder.onMalformedInput(CodingErrorAction.IGNORE) //todo ?! it was working without decoder
+    //"src\\main\\resources\\config\\azure-storage.properties"
+    val configFile = Source.fromFile("src\\main\\resources\\config\\azure-storage.properties")
     try {
-        configFile.getLines.map {
-          line =>
-            val split = line.split("=")
-            split(0) -> split(1)
-        }.toMap
+        toKeyValueConfigIterator(configFile).toMap
     } finally {
       configFile.close()
     }
   }
 
+  /**
+   * Map source file to an iterator of key-value property pairs
+   * @param config block of properties to be converted to a map.
+   * @return iterator by key-values from source file
+   */
+  def toKeyValueConfigIterator(config: BufferedSource) = {
+    config.getLines.map {
+      line =>
+        val split = line.split("=")
+        split(0) -> split(1)
+    }
+  }
 
+  /**
+   * Get coordinates from Open Cage API based on address.
+   * @param country Alpha-2 country code like "US" or "RU"
+   * @param city name of the city
+   * @param address address line
+   * @return parts.LatLong object contains latitude and longitude of an address
+   */
   def geoCode(country: String, city: String, address: String): Option[parts.LatLong] = {
     val responseFuture = client.forwardGeocode(buildProperAddress(country, city, address))
     val response = Await.result(responseFuture, 5.seconds)
     response.results.head.geometry
   }
 
+  /**
+   * Get 4-digits geohash based on coordinates.
+   * @param lat latitude
+   * @param lng longitude
+   */
   def geoHash(lat: Double, lng: Double) = {
     GeoHash.geoHashStringWithCharacterPrecision(lat, lng, 4)
   }
 
+  /**
+   * Adjust the given address to Open Cage API requirements.
+   * The address must contain comma-separated country and city in address line (at least) to find a possible
+   * geolocation properly.
+   * If input address contains city and country information, we need to be sure that commas
+   * are presented as well.
+   * If input address is presented in non-readable format, try to build one based on country code and city.
+   * @param country Alpha-2 country code like "US" or "RU"
+   * @param city name of the city
+   * @param address address line
+   * @return address line containing a comma-separated city and country
+   */
   def buildProperAddress(country: String, city: String, address: String): String = {
     if (address != null && address.contains(city)) {
-      address.replace(city, ", " + city + ",")
+      if (address.contains(',')) {
+        address
+      } else {
+        address.replace(city, ", " + city + ",")
+      }
     } else {
       city + ", " + new Locale("", country).getDisplayCountry
     }
