@@ -1,22 +1,19 @@
 import ch.hsr.geohash.GeoHash
-import com.opencagedata.geocoder.{OpenCageClient, OpenCageResponse, parts}
+import com.opencagedata.geocoder.{OpenCageClient, parts}
 import org.apache.log4j.LogManager
 import org.apache.spark.SparkConf
+import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.catalyst.ScalaReflection
 import org.apache.spark.sql.functions.{avg, col, udf}
 import org.apache.spark.sql.types.StructType
-import org.apache.spark.sql.{Row, SparkSession}
 import structure.{Geocode, Hotel, Weather}
 
 import java.util.Locale
-import java.util.concurrent.ForkJoinPool
+import scala.concurrent.Await
 import scala.concurrent.duration.DurationInt
-import scala.concurrent.{Await, ExecutionContext, Future}
 import scala.io.{BufferedSource, Source}
-//import scala.concurrent.ExecutionContext.Implicits.global
 
 object SparkApp extends App {
-//  implicit val pool = ExecutionContext.fromExecutor(new ForkJoinPool())
 
   val azureStorageConfig = getConfig(System.getenv("AZURE_STORAGE_PROPERTIES"))
   val hotelsSchema = ScalaReflection.schemaFor[HotelSchema].dataType.asInstanceOf[StructType]
@@ -40,19 +37,6 @@ object SparkApp extends App {
 
     val fixedIncorrectHotelRows =
       hotelsDf.filter(col(Hotel.id).isNotNull && (col(Hotel.latitude).isNull || col(Hotel.longitude).isNull))
-//        .mapPartitions { it =>
-//
-//          var result: Iterator[Row] = Iterator.empty[Row]
-//
-//          while(it.nonEmpty) {
-//            val batch = it.take(30)
-//            val processedBatch = getGeocodeBatch(batch)
-//            result = result ++ processedBatch
-//          }
-//
-//          result
-//        }(hotelsDf.encoder)
-//        .map(row => getGeocode(row))(hotelsDf.encoder) //todo needed
         .withColumn(Hotel.coordinates, geoCodeUdf(col(Hotel.country), col(Hotel.city), col(Hotel.address)))
         .withColumn(Hotel.latitude, col(Hotel.coordinates).getField(Geocode.latitude))
         .withColumn(Hotel.longitude, col(Hotel.coordinates).getField(Geocode.longitude))
@@ -73,24 +57,6 @@ object SparkApp extends App {
     sparkSession.stop()
   }
 
-//  private def getGeocodeBatch(rows: Iterator[Row]): Iterator[Row] = {
-//    val resultFutures: Iterator[Future[(OpenCageResponse, Row)]] = rows
-//      .map(row => (getAddress(row), row))
-//      .map { case (address, row) =>
-//        client.forwardGeocode(address).map((_, row))
-//      }
-//
-//    val resultFuture: Future[Iterator[(OpenCageResponse, Row)]] = Future.sequence(resultFutures)
-//    val result = Await.result(resultFuture, 5.seconds)
-//    result.map { case (response, row) => mapRowWithAddress(response, row) }
-//  }
-
-//  private def getAddress(row: Row) =
-//    buildProperAddress(row.getAs("country"), row.getAs("city"), row.getAs("address"))
-//
-//  private def mapRowWithAddress(response: OpenCageResponse, row: Row) = {
-//    Row(row(0), row(1), row(2), row(3), row(4), response.results.head.geometry.get.lat, response.results.head.geometry.get.lng) //todo is there any other pretty way to make a replacement? probably using dataset api?
-//  }
   /**
    * Transform property file to SparkConf
    * @param path path to property file
