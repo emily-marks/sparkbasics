@@ -2,10 +2,10 @@ import ch.hsr.geohash.GeoHash
 import com.opencagedata.geocoder.{OpenCageClient, parts}
 import org.apache.log4j.LogManager
 import org.apache.spark.SparkConf
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.catalyst.ScalaReflection
 import org.apache.spark.sql.functions.{avg, col, udf}
 import org.apache.spark.sql.types.StructType
+import org.apache.spark.sql.{DataFrame, SparkSession}
 import structure.{Geocode, Hotel, Weather}
 
 import java.util.Locale
@@ -28,28 +28,14 @@ object SparkApp extends App {
   val weatherDf = sparkSession.read.parquet(azureStorageConfig("weather"))
 
   try {
-    val geoHashUdf = udf(geoHash _)
-    val geoCodeUdf = udf(geoCode _)
-
-    val correctHotelRows =
-      hotelsDf.filter(col(Hotel.latitude).isNotNull && col(Hotel.longitude).isNotNull)
-        .withColumn(Hotel.geohash, geoHashUdf(col(Hotel.latitude), col(Hotel.longitude)))
-
-    val fixedIncorrectHotelRows =
-      hotelsDf.filter(col(Hotel.id).isNotNull && (col(Hotel.latitude).isNull || col(Hotel.longitude).isNull))
-        .withColumn(Hotel.coordinates, geoCodeUdf(col(Hotel.country), col(Hotel.city), col(Hotel.address)))
-        .withColumn(Hotel.latitude, col(Hotel.coordinates).getField(Geocode.latitude))
-        .withColumn(Hotel.longitude, col(Hotel.coordinates).getField(Geocode.longitude))
-        .withColumn(Hotel.geohash, geoHashUdf(col(Hotel.latitude), col(Hotel.longitude)))
-        .drop(Hotel.coordinates)
+    val correctHotelRows = addGeohashToCorrectHotels(hotelsDf)
+    val fixedIncorrectHotelRows = fixIncorrectHotelRows(hotelsDf)
 
     val enrichedHotels = correctHotelRows.union(fixedIncorrectHotelRows)
-
-    val enrichedWeather = weatherDf.withColumn(Weather.geohash, geoHashUdf(col(Weather.latitude), col(Weather.longitude)))
-      .groupBy(Weather.geohash).agg(avg(col(Weather.avgTempF)).as("avgTempF"), avg(col(Weather.avgTempC)).as("avgTempC"))
+    val enrichedWeather = avgTempByGeoHash(weatherDf)
 
     val join = enrichedHotels.join(enrichedWeather, enrichedWeather(Weather.geohash) === enrichedHotels(Hotel.geohash), "left").drop(Weather.geohash)
-    val l = join.count()
+
     join.write.parquet(azureStorageConfig("output.path"))
   }
   finally {
@@ -57,8 +43,45 @@ object SparkApp extends App {
     sparkSession.stop()
   }
 
+  /** Create geohash based on lat, lng values and compute average for each geohash
+   *
+   * @param weather weather Dataframe
+   * @return weather Dataframe grouped by geohash
+   */
+  private def avgTempByGeoHash(weather: DataFrame) = {
+    val geoHashUdf = udf(geoHash _)
+    weather.withColumn(Weather.geohash, geoHashUdf(col(Weather.latitude), col(Weather.longitude)))
+      .groupBy(Weather.geohash).agg(avg(col(Weather.avgTempF)).as("avgTempF"), avg(col(Weather.avgTempC)).as("avgTempC"))
+  }
+
+  private def addGeohashToCorrectHotels(hotels: DataFrame) = {
+    val geoHashUdf = udf(geoHash _)
+    hotels.filter(col(Hotel.latitude).isNotNull && col(Hotel.longitude).isNotNull)
+      .withColumn(Hotel.geohash, geoHashUdf(col(Hotel.latitude), col(Hotel.longitude)))
+  }
+
+  /**
+   * Multiple steps for correction:
+   * - Filter all rows with null latitude or longitude
+   * - Retrieve and set new values for latitude/longitude
+   * - Build geoHash based on new values
+   * @param hotels DataFrame
+   * @return enriched hotels DataFrame
+   */
+  private def fixIncorrectHotelRows(hotels: DataFrame) = {
+    val geoCodeUdf = udf(geoCode _)
+    val geoHashUdf = udf(geoHash _)
+    hotels.filter(col(Hotel.id).isNotNull && (col(Hotel.latitude).isNull || col(Hotel.longitude).isNull))
+      .withColumn(Hotel.coordinates, geoCodeUdf(col(Hotel.country), col(Hotel.city), col(Hotel.address)))
+      .withColumn(Hotel.latitude, col(Hotel.coordinates).getField(Geocode.latitude))
+      .withColumn(Hotel.longitude, col(Hotel.coordinates).getField(Geocode.longitude))
+      .withColumn(Hotel.geohash, geoHashUdf(col(Hotel.latitude), col(Hotel.longitude)))
+      .drop(Hotel.coordinates)
+  }
+
   /**
    * Transform property file to SparkConf
+   *
    * @param path path to property file
    * @return SparkConf with map of  fs.azure.account.*  properties
    */
@@ -152,7 +175,9 @@ object SparkApp extends App {
 
 
 //todo write unit tests
-//todo cleanup pom.xml
 //todo Deploy Spark job on Azure Kubernetes Service (AKS), to setup infrastructure use terraform scripts from module. For this use Running Spark on Kubernetes deployment guide and corresponding to your spark version docker image. Default resource parameters (specifically memory) will not work because of free tier limitations. You needed to setup memory and cores properly.
-// todo test if no data multiplication after join
-// todo set an OPEN_CAGE_KEY in env
+//todo Store enriched data (joined data with all the fields from both datasets) in provisioned with terraform Azure ADLS gen2 storage preserving data partitioning in parquet format in “data” container (it marked with prevent_destroy=true and will survive terraform destroy).
+//todo docker
+//todo Readme
+//todo  file with link on repo, fully documented homework with screenshots and comments.
+//todo DO NOT FORGET TO DELETE UNNECESSARY RESOURCES IN THE CLOUD VIA "TERRAFORM DESTROY", WHEN YOU FINISH WORK WITH THEM!
