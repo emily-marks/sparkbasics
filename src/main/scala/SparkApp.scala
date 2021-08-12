@@ -1,19 +1,23 @@
 import ch.hsr.geohash.GeoHash
-import com.opencagedata.geocoder.{OpenCageClient, parts}
+import com.opencagedata.geocoder.{OpenCageClient, OpenCageResponse, parts}
+import org.apache.log4j.LogManager
 import org.apache.spark.SparkConf
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.catalyst.ScalaReflection
 import org.apache.spark.sql.functions.{avg, col, udf}
 import org.apache.spark.sql.types.StructType
+import org.apache.spark.sql.{Row, SparkSession}
 import structure.{Geocode, Hotel, Weather}
 
-import java.nio.charset.CodingErrorAction
 import java.util.Locale
-import scala.concurrent.Await
+import java.util.concurrent.ForkJoinPool
 import scala.concurrent.duration.DurationInt
-import scala.io.{BufferedSource, Codec, Source}
+import scala.concurrent.{Await, ExecutionContext, Future}
+import scala.io.{BufferedSource, Source}
+//import scala.concurrent.ExecutionContext.Implicits.global
 
 object SparkApp extends App {
+//  implicit val pool = ExecutionContext.fromExecutor(new ForkJoinPool())
+
   val azureStorageConfig = getConfig(System.getenv("AZURE_STORAGE_PROPERTIES"))
   val hotelsSchema = ScalaReflection.schemaFor[HotelSchema].dataType.asInstanceOf[StructType]
   val client = new OpenCageClient(System.getenv("OPEN_CAGE_KEY"))
@@ -36,6 +40,19 @@ object SparkApp extends App {
 
     val fixedIncorrectHotelRows =
       hotelsDf.filter(col(Hotel.id).isNotNull && (col(Hotel.latitude).isNull || col(Hotel.longitude).isNull))
+//        .mapPartitions { it =>
+//
+//          var result: Iterator[Row] = Iterator.empty[Row]
+//
+//          while(it.nonEmpty) {
+//            val batch = it.take(30)
+//            val processedBatch = getGeocodeBatch(batch)
+//            result = result ++ processedBatch
+//          }
+//
+//          result
+//        }(hotelsDf.encoder)
+//        .map(row => getGeocode(row))(hotelsDf.encoder) //todo needed
         .withColumn(Hotel.coordinates, geoCodeUdf(col(Hotel.country), col(Hotel.city), col(Hotel.address)))
         .withColumn(Hotel.latitude, col(Hotel.coordinates).getField(Geocode.latitude))
         .withColumn(Hotel.longitude, col(Hotel.coordinates).getField(Geocode.longitude))
@@ -48,21 +65,39 @@ object SparkApp extends App {
       .groupBy(Weather.geohash).agg(avg(col(Weather.avgTempF)).as("avgTempF"), avg(col(Weather.avgTempC)).as("avgTempC"))
 
     val join = enrichedHotels.join(enrichedWeather, enrichedWeather(Weather.geohash) === enrichedHotels(Hotel.geohash), "left").drop(Weather.geohash)
-    //    println("should be 2499 : " + join.count())
-//    join.write.parquet("\\src\\main\\resources\\resultDf.parquet")
+    val l = join.count()
+    join.write.parquet(azureStorageConfig("output.path"))
   }
   finally {
     client.close()
     sparkSession.stop()
   }
 
+//  private def getGeocodeBatch(rows: Iterator[Row]): Iterator[Row] = {
+//    val resultFutures: Iterator[Future[(OpenCageResponse, Row)]] = rows
+//      .map(row => (getAddress(row), row))
+//      .map { case (address, row) =>
+//        client.forwardGeocode(address).map((_, row))
+//      }
+//
+//    val resultFuture: Future[Iterator[(OpenCageResponse, Row)]] = Future.sequence(resultFutures)
+//    val result = Await.result(resultFuture, 5.seconds)
+//    result.map { case (response, row) => mapRowWithAddress(response, row) }
+//  }
+
+//  private def getAddress(row: Row) =
+//    buildProperAddress(row.getAs("country"), row.getAs("city"), row.getAs("address"))
+//
+//  private def mapRowWithAddress(response: OpenCageResponse, row: Row) = {
+//    Row(row(0), row(1), row(2), row(3), row(4), response.results.head.geometry.get.lat, response.results.head.geometry.get.lng) //todo is there any other pretty way to make a replacement? probably using dataset api?
+//  }
   /**
    * Transform property file to SparkConf
    * @param path path to property file
    * @return SparkConf with map of  fs.azure.account.*  properties
    */
   def getAuthConfig(path: String): SparkConf = {
-    val configFile: BufferedSource = Source.fromFile("src\\main\\resources\\config\\azure-account-auth.properties")
+    val configFile: BufferedSource = Source.fromFile(path)
     try {
       new SparkConf().setAll(toKeyValueConfigIterator(configFile).toIterable)
     } finally {
@@ -76,9 +111,7 @@ object SparkApp extends App {
    * @return Map of required Azure properties
    */
   def getConfig(path: String): Map[String, String] = {
-//    val decoder = Codec.UTF8.decoder.onMalformedInput(CodingErrorAction.IGNORE) //todo ?! it was working without decoder
-    //"src\\main\\resources\\config\\azure-storage.properties"
-    val configFile = Source.fromFile("src\\main\\resources\\config\\azure-storage.properties")
+    val configFile = Source.fromFile(path)
     try {
         toKeyValueConfigIterator(configFile).toMap
     } finally {
@@ -107,9 +140,14 @@ object SparkApp extends App {
    * @return parts.LatLong object contains latitude and longitude of an address
    */
   def geoCode(country: String, city: String, address: String): Option[parts.LatLong] = {
-    val responseFuture = client.forwardGeocode(buildProperAddress(country, city, address))
-    val response = Await.result(responseFuture, 5.seconds)
-    response.results.head.geometry
+    try {
+      val responseFuture = client.forwardGeocode(buildProperAddress(country, city, address))
+      val response = Await.result(responseFuture, 5.seconds)
+      response.results.head.geometry
+    } catch {
+      case e: Exception => LogManager.getRootLogger.warn("Can't retrieve data from Open Cage: " + e.getMessage)
+        null //todo
+    }
   }
 
   /**
@@ -150,6 +188,5 @@ object SparkApp extends App {
 //todo write unit tests
 //todo cleanup pom.xml
 //todo Deploy Spark job on Azure Kubernetes Service (AKS), to setup infrastructure use terraform scripts from module. For this use Running Spark on Kubernetes deployment guide and corresponding to your spark version docker image. Default resource parameters (specifically memory) will not work because of free tier limitations. You needed to setup memory and cores properly.
-// todo sort-merge join?
 // todo test if no data multiplication after join
 // todo set an OPEN_CAGE_KEY in env
