@@ -1,3 +1,5 @@
+
+
 case class HotelSchema(
   id: Long,
   name: String,

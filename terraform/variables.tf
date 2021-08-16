@@ -21,6 +21,39 @@ variable "STORAGE_ACCOUNT_REPLICATION_TYPE" {
   default = "LRS"
 }
 
+variable "OPEN_CAGE_KEY" {
+  type = string
+  description = "Key for accessing Open Cage API."
+}
+
+variable "CONTAINER_NAME" {
+  type = string
+  description = "Container name."
+}
+
+variable "OAUTH2_CLIENT_SECRET" {
+  type = string
+  description = "Storage Account secret."
+  sensitive = true
+}
+
+variable "STORAGE_ACCOUNT_NAME" {
+  type = string
+  description = "Storage Account name."
+}
+
+variable "OAUTH2_CLIENT_ID" {
+  type = string
+  description = "Storage Account client id."
+  sensitive = true
+}
+
+variable "STORAGE_ACCOUNT_CLIENT_ENDPOINT" {
+  type = string
+  description = "Storage Account fs.azure.account.oauth2.client.endpoint.bd201stacc.dfs.core.windows.net property."
+  sensitive = true
+}
+
 variable "IP_RULES" {
   type = map(string)
   description = "Map of IP addresses permitted to access"

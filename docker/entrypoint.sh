@@ -73,6 +73,11 @@ case "$1" in
     CMD=(
       "$SPARK_HOME/bin/spark-submit"
       --conf "spark.driver.bindAddress=$SPARK_DRIVER_BIND_ADDRESS"
+      --conf "fs.azure.account.auth.type.${terraform output storage-account-name}.dfs.core.windows.net=OAuth"
+      --conf "fs.azure.account.oauth.provider.type.${terraform output storage-account-name}.dfs.core.windows.net=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider"
+      --conf "fs.azure.account.oauth2.client.id.${terraform output storage-account-name}.dfs.core.windows.net=${terraform output oauth2-client-id}"
+      --conf "fs.azure.account.oauth2.client.secret.${terraform output storage-account-name}.dfs.core.windows.net=${terraform output oauth2-client-secret}"
+      --conf "fs.azure.account.oauth2.client.endpoint.${terraform output storage-account-name}.dfs.core.windows.net=${terraform output oauth2-client-endpoint}"
       --deploy-mode client
       "$@"
     )
@@ -102,4 +107,4 @@ case "$1" in
 esac
 
 # Execute the container CMD under tini for better hygiene
-exec /usr/bin/tini -s -- "${CMD[@]}"
+#exec /usr/bin/tini -s -- "${CMD[@]}"
