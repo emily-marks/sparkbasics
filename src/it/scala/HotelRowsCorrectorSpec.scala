@@ -7,6 +7,7 @@ import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.scalatest.BeforeAndAfter
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
+import schema.HotelSchema
 import structure.Hotel
 import tools.HotelRowsCorrector
 import utils.GeoCodeUdf
@@ -64,10 +65,10 @@ class HotelRowsCorrectorSpec extends AnyFunSuite with Matchers with BeforeAndAft
     fixedRows.select(Hotel.geohash) should not be null
   }
 
-  class HotelRowsCorrectorTest extends HotelRowsCorrector {
+  class HotelRowsCorrectorTest extends HotelRowsCorrector{
     override val geoCodeUdf: GeoCodeUdf = new GeoCodeUdf {
       override def udfGeoCode: UserDefinedFunction =
-        udf((country: String, city: String, address: String) => parts.LatLong(testLat, testLong))
+        udf((_: String, _: String, _: String) => parts.LatLong(testLat, testLong))
     }
   }
 }

@@ -14,6 +14,6 @@ class WeatherRowsCorrector {
   def avgTempByGeoHash(weather: DataFrame): DataFrame = {
     val geohashUdf = GeohashUdf.udfGeohash
     weather.withColumn(Weather.geohash, geohashUdf(col(Weather.latitude), col(Weather.longitude)))
-      .groupBy(Weather.geohash).agg(avg(col(Weather.avgTempF)).as("avgTempF"), avg(col(Weather.avgTempC)).as("avgTempC"))
+      .groupBy(Weather.year, Weather.month, Weather.day, Weather.geohash).agg(avg(col(Weather.avgTempF)).as("avgTempF"), avg(col(Weather.avgTempC)).as("avgTempC"))
   }
 }
