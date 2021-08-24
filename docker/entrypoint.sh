@@ -70,14 +70,24 @@ fi
 case "$1" in
   driver)
     shift 1
+    # shellcheck disable=SC2054
     CMD=(
       "$SPARK_HOME/bin/spark-submit"
       --conf "spark.driver.bindAddress=$SPARK_DRIVER_BIND_ADDRESS"
-      --conf "fs.azure.account.auth.type.${terraform output storage-account-name}.dfs.core.windows.net=OAuth"
-      --conf "fs.azure.account.oauth.provider.type.${terraform output storage-account-name}.dfs.core.windows.net=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider"
-      --conf "fs.azure.account.oauth2.client.id.${terraform output storage-account-name}.dfs.core.windows.net=${terraform output oauth2-client-id}"
-      --conf "fs.azure.account.oauth2.client.secret.${terraform output storage-account-name}.dfs.core.windows.net=${terraform output oauth2-client-secret}"
-      --conf "fs.azure.account.oauth2.client.endpoint.${terraform output storage-account-name}.dfs.core.windows.net=${terraform output oauth2-client-endpoint}"
+      --class SparkApp
+      #read OAuth config
+      --conf "spark.hadoop.fs.defaultFS=abfss://m06sparkbasics@bd201stacc.dfs.core.windows.net/"
+      --conf "spark.hadoop.fs.azure.account.auth.type.bd201stacc.dfs.core.windows.net=OAuth"
+      --conf "spark.hadoop.fs.azure.account.oauth.provider.type.bd201stacc.dfs.core.windows.net=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider"
+      --conf "spark.hadoop.fs.azure.account.oauth2.client.id.bd201stacc.dfs.core.windows.net=f3905ff9-16d4-43ac-9011-842b661d556d"
+      --conf "spark.hadoop.fs.azure.account.oauth2.client.secret.bd201stacc.dfs.core.windows.net=mAwIU~M4~xMYHi4YX_uT8qQ.ta2.LTYZxT"
+      --conf "spark.hadoop.fs.azure.account.oauth2.client.endpoint.bd201stacc.dfs.core.windows.net=https://login.microsoftonline.com/b41b72d0-4e9f-4c26-8a69-f949f367c91d/oauth2/token"
+      #write OAuth config
+      --conf  "spark.hadoop.fs.azure.account.auth.type.stsparkbasics.dfs.core.windows.net=OAuth"
+      --conf  "spark.hadoop.fs.azure.account.oauth.provider.type.stsparkbasics.dfs.core.windows.net=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider"
+      --conf  "spark.hadoop.fs.azure.account.oauth2.client.id.stsparkbasics.dfs.core.windows.net=fb9dd1c3-38c4-4e91-8e7a-3f7ed35f45e8"
+      --conf  "spark.hadoop.fs.azure.account.oauth2.client.secret.stsparkbasics.dfs.core.windows.net=u7Alx_0vAsfr-3NE22Wx807qg.ECn-SsAD"
+      --conf  "spark.hadoop.fs.azure.account.oauth2.client.endpoint.stsparkbasics.dfs.core.windows.net=https://login.microsoftonline.com/b41b72d0-4e9f-4c26-8a69-f949f367c91d/oauth2/token"
       --deploy-mode client
       "$@"
     )
@@ -107,4 +117,4 @@ case "$1" in
 esac
 
 # Execute the container CMD under tini for better hygiene
-#exec /usr/bin/tini -s -- "${CMD[@]}"
+exec /sbin/tini -s -- "${CMD[@]}"

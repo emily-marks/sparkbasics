@@ -24,11 +24,13 @@ variable "STORAGE_ACCOUNT_REPLICATION_TYPE" {
 variable "OPEN_CAGE_KEY" {
   type = string
   description = "Key for accessing Open Cage API."
+  sensitive = true
 }
 
 variable "CONTAINER_NAME" {
   type = string
   description = "Container name."
+  sensitive = true
 }
 
 variable "OAUTH2_CLIENT_SECRET" {
@@ -40,6 +42,7 @@ variable "OAUTH2_CLIENT_SECRET" {
 variable "STORAGE_ACCOUNT_NAME" {
   type = string
   description = "Storage Account name."
+  sensitive = true
 }
 
 variable "OAUTH2_CLIENT_ID" {
@@ -48,7 +51,7 @@ variable "OAUTH2_CLIENT_ID" {
   sensitive = true
 }
 
-variable "STORAGE_ACCOUNT_CLIENT_ENDPOINT" {
+variable "OAUTH2_CLIENT_ENDPOINT" {
   type = string
   description = "Storage Account fs.azure.account.oauth2.client.endpoint.bd201stacc.dfs.core.windows.net property."
   sensitive = true
