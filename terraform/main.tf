@@ -1,10 +1,14 @@
 terraform {
   backend "azurerm" {
+    storage_account_name = "bd201staccaparkbasics"
+    container_name = "m06sparkbasics"
+    key = "m06sparkbasics"
+    resource_group_name = "bd201stacc-resource-group"
   }
 }
 
 provider "azurerm" {
-  version = "~> 2.62.0"
+//  version = "~> 2.65"
   features {
   }
 }
@@ -15,9 +19,9 @@ resource "azurerm_resource_group" "bdcc" {
   name = "rg-${var.ENV}-${var.LOCATION}"
   location = var.LOCATION
 
-  lifecycle {
-    prevent_destroy = true
-  }
+//  lifecycle {
+//    prevent_destroy = true
+//  }
 
   tags = {
     region = var.BDCC_REGION
@@ -29,7 +33,7 @@ resource "azurerm_storage_account" "bdcc" {
   depends_on = [
     azurerm_resource_group.bdcc]
 
-  name = "st${var.ENV}${var.LOCATION}"
+  name = "st${var.ENV}"
   resource_group_name = azurerm_resource_group.bdcc.name
   location = azurerm_resource_group.bdcc.location
   account_tier = "Standard"
@@ -41,9 +45,9 @@ resource "azurerm_storage_account" "bdcc" {
     ip_rules = values(var.IP_RULES)
   }
 
-  lifecycle {
-    prevent_destroy = true
-  }
+//  lifecycle {
+//    prevent_destroy = true
+//  }
 
   tags = {
     region = var.BDCC_REGION
@@ -58,9 +62,9 @@ resource "azurerm_storage_data_lake_gen2_filesystem" "gen2_data" {
   name = "data"
   storage_account_id = azurerm_storage_account.bdcc.id
 
-  lifecycle {
-    prevent_destroy = true
-  }
+//  lifecycle {
+//    prevent_destroy = true
+//  }
 }
 
 
@@ -87,12 +91,4 @@ resource "azurerm_kubernetes_cluster" "bdcc" {
     region = var.BDCC_REGION
     env = var.ENV
   }
-}
-
-output "client_certificate" {
-  value = azurerm_kubernetes_cluster.bdcc.kube_config.0.client_certificate
-}
-
-output "kube_config" {
-  value = azurerm_kubernetes_cluster.bdcc.kube_config_raw
 }
