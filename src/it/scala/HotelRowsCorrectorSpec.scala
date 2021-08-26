@@ -41,8 +41,6 @@ class HotelRowsCorrectorSpec extends AnyFunSuite with Matchers with BeforeAndAft
     fixedRows.count shouldEqual 1
     fixedRows.columns.contains(Hotel.geohash) shouldEqual true
     fixedRows.columns.contains(Hotel.coordinates) shouldEqual false
-//    fixedRows.filter(col(Hotel.latitude) === testLat).count() shouldEqual 1
-//    fixedRows.filter(col(Hotel.longitude) === testLong).count() shouldEqual 1 //todo try to fix? low priority since it's not used for usual flow
   }
 
   test("no incorrect values in DF") {

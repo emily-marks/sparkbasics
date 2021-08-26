@@ -5,6 +5,9 @@ import org.apache.spark.sql.functions.{avg, col}
 import structure.Weather
 import utils.GeohashUdf
 
+/**
+ * Prepare weather rows for join
+ */
 class WeatherRowsCorrector {
   /** Create geohash based on lat, lng values and compute average for each geohash
    *

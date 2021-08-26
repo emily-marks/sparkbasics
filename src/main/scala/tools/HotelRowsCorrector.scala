@@ -5,6 +5,9 @@ import org.apache.spark.sql.functions.col
 import structure.{Geocode, Hotel}
 import utils.{GeoCodeUdf, GeohashUdf}
 
+/**
+ * Prepare hotel rows for join
+ */
 class HotelRowsCorrector {
   val geoCodeUdf = new GeoCodeUdf
   /**

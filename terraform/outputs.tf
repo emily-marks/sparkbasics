@@ -8,22 +8,7 @@ output "kube_config" {
   sensitive = true
 }
 
-output "storage-account-name" {
-  value = var.STORAGE_ACCOUNT_NAME
-  sensitive = true
-}
-
-output "oauth2-client-id" {
-  value = var.OAUTH2_CLIENT_ID
-  sensitive = true
-}
-
-output "oauth2-client-secret" {
-  value = var.OAUTH2_CLIENT_SECRET
-  sensitive = true
-}
-
-output "oauth2-client-endpoint" {
-  value = var.OAUTH2_CLIENT_ENDPOINT
+output "open_cage_key" {
+  value = var.OPEN_CAGE_KEY
   sensitive = true
 }

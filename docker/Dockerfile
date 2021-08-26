@@ -11,6 +11,7 @@ ENV SPARK_HOME      /opt/spark
 ENV HADOOP_HOME     /opt/hadoop
 ENV PATH            $PATH:$SPARK_HOME/bin
 
+ENV RESULTS_PATH    abfss://data@stsparkbasics.dfs.core.windows.net/results
 RUN set -ex && \
     apk upgrade --no-cache && \
     apk --update add --no-cache bash tini libstdc++ glib gcompat libc6-compat linux-pam krb5 krb5-libs nss openssl wget sed curl && \
@@ -43,6 +44,18 @@ RUN wget -O $SPARK_HOME/jars/azure-storage-7.0.0.jar https://repo1.maven.org/mav
 RUN wget -O $SPARK_HOME/jars/azure-data-lake-store-sdk-2.3.6.jar https://repo1.maven.org/maven2/com/microsoft/azure/azure-data-lake-store-sdk/2.3.6/azure-data-lake-store-sdk-2.3.6.jar
 RUN wget -O $SPARK_HOME/jars/azure-keyvault-core-1.0.0.jar https://repo1.maven.org/maven2/com/microsoft/azure/azure-keyvault-core/1.0.0/azure-keyvault-core-1.0.0.jar
 RUN wget -O $SPARK_HOME/jars/azure-keyvault-core-1.0.0.jar https://repo1.maven.org/maven2/ch/hsr/geohash/1.4.0/geohash-1.4.0.jar
+RUN wget -O $SPARK_HOME/jars/scala-opencage-geocoder_2.12-1.1.1.jar https://repo1.maven.org/maven2/com/opencagedata/scala-opencage-geocoder_2.12/1.1.1/scala-opencage-geocoder_2.12-1.1.1.jar
+RUN wget -O $SPARK_HOME/jars/scala-opencage-geocoder_2.12-1.1.1-sources.jar https://repo1.maven.org/maven2/com/opencagedata/scala-opencage-geocoder_2.12/1.1.1/scala-opencage-geocoder_2.12-1.1.1-sources.jar
+RUN wget -O $SPARK_HOME/jars/async-http-client-backend-future_2.12-1.2.3.jar https://repo1.maven.org/maven2/com/softwaremill/sttp/async-http-client-backend-future_2.12/1.2.3/async-http-client-backend-future_2.12-1.2.3.jar
+RUN wget -O $SPARK_HOME/jars/async-http-client-backend_2.12-1.2.3.jar https://repo1.maven.org/maven2/com/softwaremill/sttp/async-http-client-backend_2.12/1.2.3/async-http-client-backend_2.12-1.2.3.jar
+RUN wget -O $SPARK_HOME/jars/reactive-streams-1.0.3.jar https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar
+RUN wget -O $SPARK_HOME/jars/circe_2.12-1.2.3.jar https://repo1.maven.org/maven2/com/softwaremill/sttp/circe_2.12/1.2.3/circe_2.12-1.2.3.jar
+RUN wget -O $SPARK_HOME/jars/circe-core_2.12-0.11.0.jar  https://repo1.maven.org/maven2/io/circe/circe-core_2.12/0.11.0/circe-core_2.12-0.11.0.jar
+RUN wget -O $SPARK_HOME/jars/core_2.12-1.2.3.jar https://repo1.maven.org/maven2/com/softwaremill/sttp/core_2.12/1.2.3/core_2.12-1.2.3.jar
+RUN wget -O $SPARK_HOME/jars/async-http-client-2.5.2.jar https://repo1.maven.org/maven2/org/asynchttpclient/async-http-client/2.5.2/async-http-client-2.5.2.jar
+RUN wget -O $SPARK_HOME/jars/circe-generic-extras_2.12-0.11.0.jar  https://repo1.maven.org/maven2/io/circe/circe-generic-extras_2.12/0.11.0/circe-generic-extras_2.12-0.11.0.jar
+RUN wget -O $SPARK_HOME/jars/circe-generic_2.12-0.11.0.jar      https://repo1.maven.org/maven2/io/circe/circe-generic_2.12/0.11.0/circe-generic_2.12-0.11.0.jar
+RUN wget -O $SPARK_HOME/jars/cats-core_2.12-1.5.0.jar https://repo1.maven.org/maven2/org/typelevel/cats-core_2.12/1.5.0/cats-core_2.12-1.5.0.jar
 
 COPY ./docker/entrypoint.sh /opt/
 COPY ./target/sparkbasics-*.jar /opt/
