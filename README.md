@@ -77,7 +77,7 @@ local:///opt/sparkbasics-1.0.0.jar
 ```
 * Get `<cluster-url>` with `kubectl cluster-info`
 * Use `<client-id>`, `<client-secret>`, `<directory-tenant-id>` for corresponding Azure Storage
-###Destroy all resources
+### Destroy all resources
 After completing a Spark job delete all resources
 ```
 terraform destroy -var-file test-variables.tfvars
