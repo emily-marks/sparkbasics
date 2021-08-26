@@ -1,4 +1,4 @@
-#Spark Basics 
+# Spark Basics 
 A spark-basics homework covers following tasks:
 * Read data from Azure ADLS gen2 Storage
 * Create Spark etl job to read data from storage container
@@ -47,7 +47,7 @@ kubectl create serviceaccount spark
 kubectl create clusterrolebinding spark-role   --clusterrole=edit   --serviceaccount=default:spark   --namespace=default
 ```
 
-###Launch Spark on AKS
+### Launch Spark on AKS
 
 ```commandline
 spark-submit 
