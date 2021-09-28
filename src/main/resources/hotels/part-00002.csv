@@ -1,0 +1,499 @@
+Id,Name,Country,City,Address,Latitude,Longitude
+1,Marriott Hotels Resorts Suites,US,Oak Brook,1401 W 22nd St,41.846704,-87.953952
+6,Quality Inn and Suites Big Rapids,US,Big Rapids,1705 S State St,43.68033,-85.48333
+8589934596,Homewood Suites By Hilton Albuquerque - Journal Center,US,Albuquerque,5400 San Antonio Ave,35.159203,-106.585014
+17179869186,Americinn Lodge Suites Austin,US,Austin,1700 Eighth St N W,43.681877,-92.98395
+25769803779,Advance Motel,US,Ironwood,663 E Cloverland Dr,46.463291,-90.161739
+34359738369,Worldwide Hospitality Supply Company,US,Pompano Beach,2700 W Atlantic Blvd,26.23112,-80.15937
+34359738373,Fitzgerald's Restaurant,US,Mohawk,5033,47.414925,-88.2985
+42949672964,Intercontinental Hotels Resorts,US,Lynnwood,17300 Highway 99,47.841274,-122.29774
+51539607554,Extended Stay America,US,San Diego,2087 Hotel Cir S,32.759003,-117.181962
+60129542146,Dallas/fort Worth Marriott Solana,US,Roanoke,5 Village Cir,32.979373,-97.168512
+77309411331,Quality Inn & Suites Historic St. Charles,US,Saint Charles,1425 S Fifth St,38.770776,-90.494614
+85899345920,Holiday Inn Lumberton North - I-95,US,Lumberton,101 Wintergreen Dr,34.669878,-79.002934
+94489280513,Super 8 Fort Collins,US,Fort Collins,409 Centro Way,40.5833,-105.00756
+103079215108,Citrus Hills Lodge Hernando,US,Hernando,350 E Norvell Bryant Hwy,28.898995,-82.428738
+111669149698,Body Tuneup,US,Key West,1435 Simonton St,24.54733,-81.79447
+120259084289,Days Inn,US,Woodstock,990 Lake Ave,42.303436,-88.43277
+128849018881,Porto Vista Hotel,US,San Diego,1835 Columbia St,32.724488,-117.167651
+128849018884,Comfort Suites,US,Jackson,61 Casey Jones Ln,35.661729,-88.85688
+128849018889,Comfort Inn,US,Lincoln,850/A Speedway Industrial Dr,33.57963,-86.05954
+137438953476,Hudson Hotel - Book Direct,US,New York,356 W 58th St,40.768355,-73.984659
+146028888066,La Quinta,US,Jupiter,34 Fishermans Way,26.934633,-80.08641
+146028888071,The Booker-lewis,US,Leesville,106 E North St,31.144867,-93.26334
+163208757250,Holiday Inn Express - Harrisburg East,US,Harrisburg,4021 Union Deposit Rd,40.277723,-76.821103
+171798691840,Inter-hotel Orl��ans Nord,US,Portland,249 Route Nationale 20,47.939428,1.892902
+180388626435,Best Western Rama Inn & Suites,US,Enterprise,1200 Highland Ave,45.423289,-117.297714
+197568495620,Microtel Inn By Wyndham Southern Pines,US,Southern Pines,205 Windstar Pl,35.159924,-79.410489
+206158430210,The Litchfield Inn,US,Pawleys Island,1 Norris Dr,33.470477,-79.097809
+214748364803,The Westin Buckhead,US,Atlanta,3391 Peachtree Rd N E,33.848866,-84.365492
+231928233984,Hampton Inn & Suites Crescent City,US,Crescent City,100 A St,41.747799,-124.203261
+240518168576,Hotel Deca - A Noble House Hotel,US,Seattle,4507 Brooklyn Ave N E,47.66143,-122.31429
+249108103169,Mandarin Oriental Hotel Group,US,San Francisco,222 Sansome St,37.792336,-122.40091
+257698037763,Merritt House Inn,US,Monterey,386 Pacific St,36.600532,-121.895694
+274877906944,Microtel of Ste Genevieve,US,Sainte Genevieve,21958 Highway 32,37.967532,-90.057002
+283467841538,Super 8 Motel Fairmont,US,Fairmont,1201 Torgerson Dr,43.676471,-94.446189
+292057776129,Extended Stay America - Orlando Theme Parks - Vineland Rd.,US,Orlando,5610 Vineland Rd,28.482007,-81.455546
+300647710720,The Miner's Inn Motel Restaurant,US,Viburnum,Highway 49 Saint Joseph St,,
+300647710725,Grandison Bed Breakfast,US,Oklahoma City,1200 N Shartel Ave,35.47999,-97.52557
+309237645312,Hawthorn Suites By Wyndham Livermore Wine Country,US,Livermore,1700 N Livermore Ave,37.698349,-121.77371
+317827579905,Juniper Lane Guest House,US,Friday Harbor,1312 Beaverton Valley Rd,48.540152,-123.038539
+326417514497,Lakeway Resort & Spa,US,Austin,101 Lakeway Dr,30.373974,-97.98694
+335007449088,Americinn Lodge & Suites Appleton,US,Appleton,3900 N Gateway Dr,44.30017,-88.37131
+343597383683,Ip Casino Resort Spa,US,Biloxi,850 Bayview Ave,30.411692,-88.890249
+352187318274,Raton Pass Inn,US,Raton,308 Canyon Dr,36.90992,-104.44177
+360777252864,Town Country Motel,US,Osage Beach,5451 Osage Beach Pkwy,38.12717,-92.66533
+369367187457,Super 8 Cloquet,US,Cloquet,121 Big Lake Rd,46.713882,-92.46476
+377957122048,Econo Lodge,US,Conway,1101 Church St,33.840336,-79.06031
+386547056640,Osage Village Inn,US,Osage Beach,4616 Osage Beach Pkwy,38.14468,-92.629776
+386547056645,Dockers Inn,US,Branson,3060 Green Mountain Dr,36.632772,-93.272004
+395136991236,Motel 6,US,Gaylord,612 Court Ave,44.55565,-94.22368
+403726925825,Super 8 - Effingham,US,Effingham,1400 Thelma Keller Ave,39.14055,-88.565983
+412316860416,La Quinta,US,Beaumont,5820 Walden Rd,30.03867,-94.15933
+420906795009,Best Western Plus San Marcos Inn,US,Morro Bay,250 Pacific St,35.364612,-120.851159
+429496729602,Country Inn and Suites By Carlson Galena,US,Galena,11334 Oldenburg Ln,42.437138,-90.448875
+438086664194,Econo Lodge,US,Canton,138 Keith Dr,34.255254,-84.46426
+446676598785,Stirling City Hotel,US,Stirling City,16975 Skyway,39.903822,-121.527419
+455266533378,Unionport Lodge No 333 F A M,US,Bloomingdale,3451 County Road 39,40.363297,-80.84962
+463856467970,Colonial Motel,US,Manistique,1119 E Lakeshore Dr,45.952175,-86.22773
+472446402562,Plantation Inn,US,Shreveport,4901 Greenwood Rd,32.47119,-93.82771
+489626271746,Alyssa's Motel,US,Casco,Rr 302,,
+498216206336,Fairfield Inn/suites-marriott,US,Titusville,4735 Helen Hauser Blvd,28.552433,-80.853663
+506806140928,"Hotel Monaco Chicago, A Kimpton Hotel",US,Chicago,225 N Wabash Ave,41.886337,-87.62626
+515396075520,Econo Lodge,US,Bellingham,3750 Meridian St,48.781123,-122.485944
+515396075525,Magton Inc,US,Ocean City,1001 Ocean Ave,39.27588,-74.5755
+515396075526,Holiday Inn & Suites Green Bay Stadium,US,Green Bay,2785 Ramada Way,44.47606,-88.07651
+541165879297,Best Western Burlington Inn,US,Burlington,770 Huffman Mill Rd,36.070038,-79.49494
+549755813889,Quality Inn & Suites Hanes Mall,US,Winston Salem,2008 S Hawthorne Rd,36.07896,-80.29879
+558345748483,Four Points-kansas,US,Kansas City,11832 N W Plaza Cir,39.307376,-94.684165
+566935683073,Springhill Suites Columbia,US,Columbia,7055 Minstrel Way,39.176128,-76.847257
+575525617666,Hilton San Diego Airport/harbor Island,US,San Diego,1960 Harbor Island Dr,32.724775,-117.209891
+584115552257,Quality Inn and Suites,US,Laramie,1655 Centennial Dr,41.324506,-105.617388
+601295421440,Miramar Boutique Hotel,US,Manassas,Route De La Corniche,41.679122,8.914842
+618475290626,Sleep Inn,US,Millbrook,2295 Cobbs Ford Rd,32.46026,-86.38375
+627065225218,La Quinta Inn and Suites Meridian,US,Meridian,1400 Roebuck Dr,32.350392,-88.691659
+652835028994,Hotel Casena Dei Colli,US,Palermo,Via Villa Rosato 20 22,38.160424,13.331846
+652835028999,Homestead Studio Suites,US,Duluth,3525 Breckinridge Blvd,33.951254,-84.125047
+661424963586,Twelve Hotels & Residences,US,Atlanta,361 17TH Saint Atlantic Sta,33.79156,-84.398014
+670014898176,Bayside Resort Hotel,US,West Yarmouth,225 Route 28,41.655436,-70.256179
+687194767360,Mandarin Oriental Jakarta,US,Staten Island,Jalan Mh Thamrin,-6.195424,106.823673
+695784701952,Days Inn & Suites Castle Rock,US,Castle Rock,4691 Castleton Way,39.408529,-104.866775
+695784701957,Rodeway Inn,US,Gillette,2011 Rodgers Dr,44.294353,-105.529915
+712964571137,Cougar Crest Lodge,US,Coeur D Alene,8917 W Hawk Ridge Rd,47.66414,-116.90273
+730144440320,Polynesian Plaza,US,Honolulu,2131 Kalakaua Ave,21.281574,-157.830789
+738734374912,Fiesta Inn Centro Historico,US,Bristol,Av Juarez 76 Colonel Centro,19.43517,-99.146719
+747324309506,Holiday Inn Express,US,Milford,301 Old Bank Rd,39.184318,-84.267209
+747324309510,Monarch Inn,US,Mariposa,5059 Highway 140,37.486574,-119.967114
+755914244100,Courtyard By Marriott Rockaway Mount Arlington,US,Mount Arlington,15 Howard Blvd,40.900052,-74.634776
+764504178690,Springhill Suites By Marriott South Bend/mishawaka,US,Mishawaka,5225 Edison Lakes Pkwy,41.70449,-86.18567
+781684047872,Knights Inn,US,Catonsville,6422 Baltimore National Pike,39.284878,-76.758835
+790273982464,Close For You,US,Carnegie,117 E Main St,40.40608,-80.08916
+798863917056,Quality Inn,US,Harrison,1210 Us 62/65 North,36.26049,-93.129486
+798863917061,Five Seasuns Bed & Breakfast Inn,US,Port Angeles,1006 S Lincoln St,48.110366,-123.439368
+807453851652,Country Inns Suites,US,Chippewa Falls,1021 W Park Ave,44.9139,-91.40014
+816043786241,Comfort Inn,US,Fort Myers,4171 Boatways Rd,26.683669,-81.796281
+824633720832,Penzion Accom,US,Pasadena,Hurbanova 44,48.90024,18.051859
+824633720837,Western Inn-glacier Park,US,Columbia Falls,7285 Us Hwy 2 E,48.36373,-114.15178
+824633720841,Residence Inn By Marriott Tucson Williams Centre,US,Tucson,5400 E Williams Cir,32.220226,-110.8769
+833223655427,Cliffrose Lodge Gardens,US,Springdale,281 Zion Park Blvd,37.196957,-112.992165
+841813590021,Hotel Eug��ne En Ville,US,Celina,6 Rue Buffault,48.87503,2.34152
+858993459200,Glendale Gaslight Inn,US,Glendale,5747 W Glendale Ave,33.538586,-112.182594
+867583393792,Knights Inn Amarillo Airport,US,Amarillo,1803 Lakeside St,35.194703,-101.742208
+876173328386,Comfort Inn & Suites,US,Joplin,3400 S Range Line Rd,37.05198,-94.47845
+893353197570,Microtel Inn By Wyndham Knoxville,US,Knoxville,309 N Peters Rd,35.91483,-84.09107
+901943132160,Ambassadors Inn and Suites,US,Virginia Beach,716 21st St,36.84766,-75.98443
+910533066752,Super 8,US,Jasper,1287 Highway 78 W,33.84603,-87.25914
+910533066757,Cliffs 7305 By Redawning,US,Princeville,3811 Edward Rd,22.226328,-159.481416
+927712935936,North Country Inn B & B,US,Rangeley,2541 Main St,44.96541,-70.643174
+927712935938,Americinn Lodge Suites Princeton,US,Princeton,2120 Claude Bailey Pkwy,41.368016,-89.456966
+936302870531,Wallowa Lake Vacation Rentals,US,Enterprise,82240 Fish Hatchery Ln,45.417587,-117.2996
+944892805121,Comfort Inn,US,Valentine,101 Main St,42.871143,-100.55091
+944892805125,La Quinta Inn and Suites Hopkinsville,US,Hopkinsville,345 Griffin Bell Dr,36.81071,-87.49478
+953482739714,High Desert Motel,US,Joshua Tree,61310 29 Palms Hwy,34.13495,-116.325745
+962072674307,"Country Inn & Suites By Carlson, Rocky Mount, Nc",US,Rocky Mount,672 English Rd,35.979098,-77.847276
+962072674310,Holiday Inn Express,US,Corydon,249 Federal Dr N W,38.233478,-86.132841
+970662608900,"Palomar Washington Dc, A Kimpton Hotel",US,Washington,2121 P St N W,,
+979252543488,Royal Inn,US,Lovelock,1435 Cornell Ave,40.185058,-118.470236
+996432412672,Rodeway Inn,US,Newport,206 N Coast Hwy,44.63752,-124.0607
+1005022347264,Manor Vail Lodge,US,Vail,595 Vail Valley Dr,39.6387,-106.368201
+1005022347269,Lexington Inn,US,Hammond,46053 N Puma Dr,30.517838,-90.50095
+1013612281860,Days Inn Geneva,US,Geneva,485 Hamilton St,42.8566,-77.00576
+1013612281865,Ritz Hotel,US,San Francisco,216 Eddy St,37.784122,-122.41122
+1030792151041,Super 8 Alamosa,US,Alamosa,2505 Main St,37.47547,-105.89536
+1039382085633,La Quinta Inn Auburn Worcester,US,Auburn,446 Southbridge St,42.199763,-71.840633
+1056561954819,Palm Suites,US,Atlantic Beach,602 W Fort Macon Rd,34.701386,-76.74691
+1065151889409,Budget Inn,US,Herkimer,715 Mohawk St,43.018673,-74.9925
+1073741824004,The Inn At Bella Vista,US,Bella Vista,101 Chelsea Rd,36.464432,-94.251779
+1082331758596,Americas Best Value Inn,US,Watsonville,781 Freedom Blvd,36.91657,-121.76056
+1099511627778,Hampton Inn & Suites-downtown-tutwiler,US,Birmingham,2021 Park Pl,33.520234,-86.808538
+1108101562369,Whiteface Chalet,US,Wilmington,788 Springfield Rd,44.364186,-73.824065
+1116691496961,Lakeview Lodge,US,Ferriday,1424 Fisherman Dr,31.61563,-91.52781
+1116691496963,Americas Best Value Inn,US,Boiling Springs,125 Sloane Garden Rd,35.011314,-81.954798
+1125281431554,Pullman Rail Journeys,US,Chicago,118 S Clinton St,41.880368,-87.6413
+1133871366148,Calloway Inn,US,Baton Rouge,10920 Mead Rd,30.42881,-91.06002
+1142461300739,Comfort Suites Shreveport,US,Shreveport,6715 Financial Cir,32.45013,-93.86207
+1151051235329,Red Banks Motel,US,Fremont,E7331 Red Banks Rd,44.27578,-88.8607
+1159641169920,Holiday Inn Canyon De Chelly,US,Chinle,Bia Route 7 Garcia Trading Post,36.151195,-109.547157
+1168231104515,Villager Inn Motel,US,Selma,1765 Young St,36.563004,-119.613205
+1176821039106,Comfort Inn Birmingham - Irondale,US,Birmingham,4965 Montevallo Rd,33.529422,-86.715389
+1185410973699,Studio 6,US,Dixfield,6 Harding Ln,44.530685,-70.457016
+1194000908291,Days Inn Lanham Washington Dc,US,Lanham,9023 Annapolis Road/i 495,38.96123,-76.86226
+1202590842885,Homewood Suites - Mall of America,US,Minneapolis,2261 Killebrew Dr,44.85201,-93.23993
+1211180777473,Sunset Inn,US,Tatum,68 W Hwy Hwy 380,33.38186,-103.395424
+1236950581248,Comfort Suites Southport,US,Southport,4963 Southport Supply Rd,33.9534,-78.0521
+1236950581253,Howard Johnson,US,Leavenworth,405 W Us Highway 2,47.19644,-120.943665
+1262720385024,Holiday Inn Express & Suites Phoenix Downtown - Ballpark,US,Phoenix,620 N 6th St,33.45499,-112.06685
+1271310319616,Super 8,US,Hope,2000 Holiday Dr,33.683724,-93.611822
+1271310319621,Lamothe House,US,New Orleans,621 Esplanade Ave,29.9632203,-90.059329
+1288490188801,Knights Inn,US,Pharr,2706 N Cage Blvd,26.21776,-98.178861
+1297080123394,Cal Neva Resort,US,Crystal Bay,2 Stateline Rd,39.22524,-120.00566
+1297080123396,Comfort Inn Montgomery,US,Montgomery,1035 W South Blvd,32.327641,-86.33771
+1305670057986,Marquesa Hotel & Cafe Marquesa,US,Key West,600 Fleming St,24.556827,-81.801459
+1305670057991,A Swallow's Nest Motel,US,Vashon,6030 S W 248th St,47.382908,-122.40764
+1314259992577,Atlantic House,US,Narragansett,85 Ocean Rd,41.428084,-71.456495
+1322849927169,Barber Joyce,US,Hobart,Stamford Rd,42.98961,-78.74249
+1322849927176,Comfort Inn Huntingdon,US,Huntingdon,100 S 4th St,40.48387,-78.01093
+1331439861764,Terry Peak Ski Area,US,Lead,21120 Stewart Slope Rd,44.334573,-103.840384
+1348619730944,Adobe Nido Bed & Breakfast,US,Albuquerque,1124 Major Ave N W,35.12073,-106.65298
+1348619730946,Grand Hotel Cadenabbia,US,Griante,Via Regina 1,45.987791,9.234449
+1357209665536,Comfort Inn,US,Kearney,903 2nd Ave,40.682933,-99.084655
+1365799600128,Springhill Suites By Marriott Sarasota Bradenton,US,Sarasota,1020 University Pkwy,27.381832,-82.549741
+1365799600130,Quality Inn Long Beach Airport,US,Signal Hill,3201 E Pacific Coast Hwy,33.790227,-118.154554
+1374389534722,Hotel Adler Cavalieri,US,Humeston,Via Della Scala 40,43.775491,11.245648
+1382979469314,Nantahala Cabins Inc,US,Bryson City,580 Nantahala Cabins Ln,35.33995,-83.560104
+1391569403906,Chelsea Inn,US,San Francisco,2095 Lombard St,37.799801,-122.436031
+1400159338497,The Chestnut Boutique Hotel,US,Morgantown,345 Chestnut St,39.630993,-79.956245
+1417339207681,Hotel Portaventura,US,Stone Creek,Avda Alcalde Pere Molaskm 2,41.08352,1.153677
+1417339207686,Crossland Economy Studios - Lake Charles - Sulphur,US,Sulphur,104 Mallard St,30.21369,-93.32655
+1425929142277,Courtyard By Marriott,US,Fitchburg,150 Royal Plaza Dr,42.545856,-71.85278
+1443109011456,Holiday Inn Express Pinetop,US,Pinetop,431 E White Mountain Blvd,34.134802,-109.949645
+1451698946049,Cedar Crest Inn,US,Camden,115 Elm St,44.20244,-69.07486
+1460288880641,Pine Needles Golf Course,US,Southern Pines,1005 Midland Rd,35.197103,-79.392412
+1460288880644,Mineola Motel,US,Little River,1505 Highway 17,33.87537,-78.61731
+1468878815234,Days Inn Marion,US,Marion,Rr 1 Hwy 11,36.86846,-81.41384
+1468878815239,Super 8 Schenect/albany Area,US,Schenectady,3083 Carman Rd,42.764084,-73.939324
+1468878815242,Holiday Inn Express & Suites Crossville,US,Crossville,560 Peavine Rd,35.96427,-84.98142
+1477468749828,Main Street Bed & Breakfast,US,Cooperstown,202 Main St,42.701214,-74.931078
+1494648619010,Agate Beach Motel,US,Newport,175 N W Gilbert Way,44.67388,-124.06068
+1503238553603,Days Inn West Memphis,US,West Memphis,1100 Ingram Blvd/i 40,35.160223,-90.15817
+1520418422784,The National Conference Center,US,Leesburg,18980 Upper Belmont Pl,39.094056,-77.485577
+1529008357377,Super 8 Big Cabin Vinita Ok,US,Vinita,30954 S Highway 69,36.57115,-95.22049
+1529008357379,Shamrock Hill Inn,US,Long Eddy,3 County Road 134,41.84524,-75.11439
+1537598291971,Hotel An Der Philharmonie,US,Raymond,Grosse Neugasse 36 38,50.939736,6.961262
+1546188226563,Motel 6,US,Moses Lake,2822 W Driggs Dr,47.104012,-119.310964
+1554778161153,Quality Inn and Suites,US,Bossier City,2717 Village Ln,32.52313,-93.70201
+1563368095746,Quality Inn,US,Umatilla,705 Willamette St,45.92054,-119.28941
+1580547964929,Econo Lodge,US,Altoona,2906 Pleasant Valley Blvd,40.49514,-78.395267
+1589137899521,Holiday Inn Express Hotel and Suites Meadowlands Area,US,Carlstadt,100 Paterson Plank Rd,40.832467,-74.08601
+1606317768705,Great Basin Inn,US,Ely,701 E Aultman St,39.24836,-114.89076
+1623497637888,Holiday Inn-bayside,US,San Diego,4875 N Harbor Dr,32.726385,-117.223519
+1623497637893,Sleep Inn Slidell,US,Slidell,142 Oak Ct,30.22415,-89.78667
+1640677507072,Best Western Plus,US,Corte Madera,56 Madera Blvd,37.929938,-122.517879
+1657857376257,Quality Inn Johnson City,US,Johnson City,119 Pinnacle Dr,36.37389,-82.42733
+1657857376261,Welcome Inn Apartments,US,Parkville,8729 Loch Bend Dr,39.39842,-76.56298
+1666447310852,Hyatt Place Atlanta/alpharetta/north Point Mall,US,Alpharetta,7500 N Point Pkwy,34.041713,-84.303592
+1675037245443,Howard Johnson Inn - Newburgh,US,Newburgh,95 Route 17k,41.505388,-74.073291
+1675037245445,Innpoints Worldwide,US,Albuquerque,800 20th St N W,35.100147,-106.66754
+1700807049216,Arrowhead Motel and Rv Park,US,Ruidoso,616 Highway 70,33.312737,-105.63678
+1709396983809,Quality Inn Spearfish,US,Spearfish,2725 1st Ave,44.48047,-103.81389
+1709396983811,La Quinta Inn and Suites Nashville Franklin,US,Franklin,4207 Franklin Commons Ct,35.911253,-86.822972
+1717986918403,London Bridge Hotel,GB,London,8 18 London Bridge St Southwark London SE1 9SG United Kingdom,51.5052188,-0.088166
+1717986918408,Acca Palace,IT,Milan,Via Giovanni Nicotera 9 Niguarda 20161 Milan Italy,45.5099969,9.1739942
+1726576852994,Banke H tel,FR,Paris,20 Rue La Fayette 9th arr 75009 Paris France,48.8735736,2.335965
+1726576852999,London Marriott Maida Vale,GB,London,Plaza Parade Camden London NW6 5RP United Kingdom,51.5357597,-0.1902591
+1735166787588,Hotel Zeitgeist Vienna Hauptbahnhof,AT,Vienna,Sonnwendgasse 15 10 Favoriten 1100 Vienna Austria,48.1829645,16.3776709
+1743756722177,Grange White Hall Hotel,GB,London,2 5 Montague Street Bloomsbury Camden London WC1B 5BU United Kingdom,51.5203469,-0.1260893
+1743756722182,Hotel G tico,ES,Barcelona,Jaime I 14 Ciutat Vella 08002 Barcelona Spain,41.3835584,2.178311
+1752346656770,Best Western Paris Gare Saint Lazare,FR,Paris,18 rue de Constantinople 8th arr 75008 Paris France,48.8803752,2.319591
+1752346656773,Hotel Mercure Wien Westbahnhof,AT,Vienna,Felberstra e 4 15 Rudolfsheim F nfhaus 1150 Vienna Austria,48.1983543,16.3375246
+1760936591360,Mercure London Paddington Hotel,GB,Paddington,144 Praed St Paddington Westminster Borough London W2 1HU United Kingdom,51.5161139,-0.1749521
+1760936591365,H tel Beauchamps,FR,Paris,24 rue de Ponthieu 8th arr 75008 Paris France,48.87096,2.3091617
+1760936591369,Hotel Royal,AT,Vienna,Singerstra e 3 01 Innere Stadt 1010 Vienna Austria,48.2078727,16.3724042
+1769526525954,La Villa Maillot,FR,Paris,143 Avenue De Malakoff 16th arr 75016 Paris France,48.875551,2.2835191
+1769526525960,Hotel Omm,ES,Barcelona,Rossell 265 Eixample 08008 Barcelona Spain,41.3962468,2.1609551
+1778116460546,Hotel Odeon Saint Germain,FR,Paris,13 rue Saint Sulpice 6th arr 75006 Paris France,48.8513515,2.3375084
+1778116460551,Eurostars Embassy,AT,Vienna,Landstra er Hauptstra e 120 03 Landstra e 1030 Vienna Austria,48.1964001,16.3958668
+1786706395137,Best Western Plus Elys e Secret,FR,Paris,5 rue de Ponthieu 8th arr 75008 Paris France,48.8701247,2.311141
+1795296329728,Mercure Paris Place d Italie,FR,Paris,25 Boulevard Auguste Blanqui 13th arr 75013 Paris France,48.830196,2.3529539
+1795296329734,Enterprise Hotel Design Boutique,IT,Milan,Corso Sempione 91 Fiera Milano City 20149 Milan Italy,45.4867005,9.1575137
+1803886264323,Les Jardins Du Marais,FR,Paris,74 rue Amelot 11th arr 75011 Paris France,48.8605219,2.3680239
+1812476198912,Staunton Hotel B B,GB,London,13 15 Gower Street Camden London WC1E 6HE United Kingdom,51.520378,-0.1303414
+1812476198917,COMO The Halkin,GB,London,Halkin Street Westminster Borough London SW1X 7DJ United Kingdom,51.4988977,-0.1562015
+1821066133504,DoubleTree by Hilton London Victoria,GB,London,2 Bridge Place Victoria Westminster Borough London SW1V 1QA United Kingdom,51.49398,-0.143372
+1821066133505,Conservatorium Hotel,NL,Amsterdam,Van Baerlestraat 27 Oud Zuid 1071 AN Amsterdam Netherlands,52.358631,4.8786236
+1829656068097,The Queens Gate Hotel,GB,London,31 34 Queen s Gate Kensington and Chelsea London SW7 5JA United Kingdom,51.4981225,-0.1799693
+1829656068102,NYX Milan,IT,Milan,Piazza Quattro Novembre 3 Central Station 20124 Milan Italy,45.4868745,9.2018406
+1838246002690,Chasse Hotel,NL,Amsterdam,Chassestraat 62 64 De Baarsjes 1057 JJ Amsterdam Netherlands,52.3696719,4.8614475
+1846835937284,AC Hotel Sants a Marriott Lifestyle Hotel,ES,Barcelona,Passeig de Sant Antoni 36 40 Sants Montju c 08014 Barcelona Spain,41.3775577,2.1384686
+1864015806465,Park Avenue Baker Street,GB,London,173 Gloucester Place Westminster Borough London NW1 6DX United Kingdom,51.5241452,-0.1609907
+1864015806470,Hotel Vueling Bcn by HC,ES,Barcelona,Gran Via 550 Eixample 08011 Barcelona Spain,41.3831641,2.1604736
+1872605741056,One Aldwych,GB,London,1 Aldwych Westminster Borough London WC2B 4BZ United Kingdom,51.5117832,-0.1194172
+1872605741061,Hotel Wandl,AT,Vienna,Petersplatz 9 01 Innere Stadt 1010 Vienna Austria,48.2097026,16.3703902
+1881195675652,Hotel Cafe Royal,GB,London,68 Regent Street West End Mayfair Westminster Borough London W1B 4DY United Kingdom,51.5100916,-0.1359431
+1889785610241,La Villa Royale,FR,Paris,2 Rue Duperr 9th arr 75009 Paris France,48.8821595,2.3367444
+1889785610246,City Rooms,AT,Vienna,Daungasse 1 6 7 08 Josefstadt 1080 Vienna Austria,48.2133296,16.3471399
+1898375544833,The Chesterfield Mayfair,GB,London,35 Charles Street Mayfair Westminster Borough London W1J 5EB United Kingdom,51.5076899,-0.1471358
+1906965479424,Hotel Duminy Vendome,FR,Paris,3 5 rue du Mont Thabor 1st arr 75001 Paris France,48.8654726,2.3292934
+1906965479429,Gallery Hotel,ES,Barcelona,Rossell 249 Eixample 08008 Barcelona Spain,41.3949242,2.1593099
+1915555414020,The Ring Vienna s Casual Luxury Hotel,AT,Vienna,K rntner Ring 8 01 Innere Stadt 1010 Vienna Austria,48.2017091,16.3710205
+1924145348610,My Home In Paris,FR,Paris,5 Rue De Malte 11th arr 75011 Paris France,48.8636049,2.3688352
+1941325217792,Hotel de Seze,FR,Paris,16 rue de S ze 9th arr 75009 Paris France,48.8705741,2.3264194
+1941325217797,Andaz Amsterdam Prinsengracht A Hyatt Hotel,NL,Amsterdam,Prinsengracht 587 Amsterdam City Center 1067 HT Amsterdam Netherlands,52.3678368,4.8830788
+1949915152387,Bilderberg Hotel Jan Luyken,NL,Amsterdam,Jan Luykenstraat 58 Oud Zuid 1071 CS Amsterdam Netherlands,52.3599196,4.8810128
+1958505086980,DoubleTree by Hilton Hotel Amsterdam NDSM Wharf,NL,Amsterdam,Ndsm Plein 28 Amsterdam Noord 1033 WB Amsterdam Netherlands,52.4001813,4.8936653
+1967095021572,Senator Barcelona Spa Hotel,ES,Barcelona,Cardenal Reig 11 Les Corts 08028 Barcelona Spain,41.3777977,2.1135971
+1975684956162,Montagu Place Hotel,GB,London,2 Montagu Place Westminster Borough London W1H 2ER United Kingdom,51.5191009,-0.1592
+1975684956167,Hotel ViennArt am Museumsquartier,AT,Vienna,Breite Gasse 9 07 Neubau 1070 Vienna Austria,48.2035677,16.356445
+1984274890754,Holiday Inn London Kensington Forum,GB,London,97 Cromwell Road Kensington and Chelsea London SW7 4DN United Kingdom,51.4942305,-0.1851141
+1992864825345,Hotel Louvre Montana,FR,Paris,12 rue Saint Roch 1st arr 75001 Paris France,48.8644627,2.3318473
+1992864825350,Excelsior Hotel Gallia Luxury Collection Hotel,IT,Milan,Piazza Duca D Aosta 9 Central Station 20124 Milan Italy,45.4857027,9.2020127
+2001454759939,Apollo Hotel Amsterdam,NL,Amsterdam,Apollolaan 2 Oud Zuid 1077 BA Amsterdam Netherlands,52.3486098,4.8844292
+2001454759944,Hotel Dei Cavalieri,IT,Milan,Piazza Giuseppe Missori 1 Milan City Center 20123 Milan Italy,45.4608547,9.1886179
+2010044694528,The London EDITION,GB,London,10 Berners Street Westminster Borough London W1T 3NP United Kingdom,51.5167472,-0.135965
+2010044694533,Hilton Garden Inn Vienna South,AT,Vienna,Hertha Firnberg Stra e 5 10 Favoriten 1100 Vienna Austria,48.1667886,16.344908
+2018634629123,Georgian House Hotel,GB,London,35 39 St Georges Drive Westminster Borough London SW1V 4DG United Kingdom,51.490724,-0.143868
+2018634629127,Austria Trend Parkhotel Sch nbrunn Wien,AT,Vienna,Hietzinger Hauptstra e 10 14 13 Hietzing 1130 Vienna Austria,48.1866506,16.3023375
+2027224563713,Villa Alessandra,FR,Paris,9 Place Boulnois 17th arr 75017 Paris France,48.8794223,2.2957628
+2027224563720,H10 Casa Mimosa 4 Sup,ES,Barcelona,Pau Claris 179 Eixample 08037 Barcelona Spain,41.3962106,2.1621171
+2035814498305,Rosewood London,GB,London,252 High Holborn Holborn Camden London WC1V 7EN United Kingdom,51.5173303,-0.1180966
+2044404432901,H tel de Lille,FR,Paris,40 rue de Lille 7th arr 75007 Paris France,48.8585626,2.3299138
+2052994367488,Hotel Saint Petersbourg Opera,FR,Paris,35 Rue Caumartin 9th arr 75009 Paris France,48.872174,2.328075
+2061584302083,Hotel Margot House,ES,Barcelona,Paseo de Gracia 46 Eixample 08007 Barcelona Spain,41.3918805,2.1660363
+2070174236674,Relais Saint Jacques,FR,Paris,3 Rue Abb De L Ep e 5th arr 75005 Paris France,48.8430523,2.3422519
+2078764171264,H tel Le Royal Monceau Raffles Paris,FR,Paris,37 Avenue Hoche 8th arr 75008 Paris France,48.8756359,2.3004967
+2078764171269,Armani Hotel Milano,IT,Milan,Via Manzoni 31 Milan City Center 20121 Milan Italy,45.470532,9.19302
+2087354105860,Park Hyatt Milano,IT,Milan,Via Tommaso Grossi 1 Milan City Center 20121 Milan Italy,45.4654912,9.1889612
+2095944040450,Hotel Des Saints Peres Esprit de France,FR,Paris,65 rue des Saints P res 6th arr 75006 Paris France,48.8534026,2.3299043
+2095944040455,Catalonia Magdalenes,ES,Barcelona,Magdalenes 13 15 Ciutat Vella 08002 Barcelona Spain,41.3861283,2.1745291
+2104533975043,Thistle Hyde Park,GB,London,90 92 Lancaster Gate Westminster Borough London W2 3NR United Kingdom,51.5112451,-0.1808938
+2113123909633,Ritz Paris,FR,Paris,15 Place Vend me 1st arr 75001 Paris France,48.8679466,2.3289593
+2113123909638,ARCOTEL Kaiserwasser Superior,AT,Donauinsel,Wagramer Stra e 8 22 Donaustadt 1220 Vienna Austria,48.231915,16.417026
+2121713844228,Hilton London Green Park,GB,London,Half Moon Street Westminster Borough London W1J 7BN United Kingdom,51.5064534,-0.1456146
+2130303778816,Bassano,FR,Paris,15 Rue de Bassano 16th arr 75016 Paris France,48.8690596,2.2971078
+2130303778821,Ayre Hotel Caspe,ES,Barcelona,Caspe 103 Eixample 08013 Barcelona Spain,41.3961021,2.1794688
+2138893713413,TH Street Duomo,IT,Milan,Via Santa Radegonda 14 Milan City Center 20121 Milan Italy,45.4657568,9.1916674
+2147483648004,Ilunion Almirante,ES,Barcelona,Via Laietana 42 Ciutat Vella 08003 Barcelona Spain,41.3860521,2.176157
+2156073582598,88 Studios,GB,London,88 Holland Road Kensington and Chelsea London W14 8BN United Kingdom,51.4992789,-0.2090733
+2164663517185,Op ra Marigny,FR,Paris,11 Rue de l Arcade 8th arr 75008 Paris France,48.871723,2.3235377
+2164663517191,Hollmann Beletage Design Boutique,AT,Vienna,K llnerhofgasse 6 01 Innere Stadt 1010 Vienna Austria,48.2105156,16.3760717
+2173253451780,Best Western Premier Hotel Dante,ES,Barcelona,Mallorca 181 Eixample 08036 Barcelona Spain,41.3894195,2.1564886
+2181843386371,Mercure Paris Opera Grands Boulevards,FR,Paris,42 Rue Des Petites Ecuries 10th arr 75010 Paris France,48.8740668,2.3502172
+2181843386374,Grange Rochester Hotel,GB,London,69 Vincent Square Westminster Borough London SW1P 2PA United Kingdom,51.4942654,-0.1366026
+2181843386379,Acevi Villarroel,ES,Barcelona,Villarroel 106 Eixample 08011 Barcelona Spain,41.3853781,2.1567228
+2190433320968,Hotel Atlanta,AT,Vienna,W hringer Stra e 33 35 09 Alsergrund 1090 Vienna Austria,NA,NA
+2199023255556,NH Amsterdam Caransa,NL,Amsterdam,Rembrandtplein 19 Amsterdam City Center 1017 CT Amsterdam Netherlands,52.3664077,4.8969091
+2216203124736,Mercure Paris Centre Tour Eiffel,FR,Paris,20 Rue Jean Rey 15th arr 75015 Paris France,48.8548641,2.2923181
+2216203124741,The Westin Palace,IT,Milan,Piazza della Repubblica 20 Central Station 20124 Milan Italy,45.4790357,9.199028
+2224793059331,Hotel Sanpi Milano,IT,Milan,Via Lazzaro Palazzi 18 Central Station 20124 Milan Italy,45.4777623,9.203169
+2233382993924,ME London by Melia,GB,London,336 337 Strand London Westminster Borough London WC2R 1HA United Kingdom,51.511879,-0.118552
+2241972928514,Waldorf Astoria Amsterdam,NL,Amsterdam,Herengracht 542 556 Amsterdam City Center 1017 CG Amsterdam Netherlands,52.364768,4.896945
+2241972928516,Hotel Miramar Barcelona GL,ES,Barcelona,Plaza Carlos Iba ez 3 Sants Montju c 08038 Barcelona Spain,41.3703041,2.17141
+2250562863106,Maison Borella,IT,Milan,Alzaia Naviglio Grande 8 Navigli 20144 Milan Italy,45.4521067,9.1758135
+2259152797698,H tel Le M,FR,Paris,20 bis rue de la Ga t 14th arr 75014 Paris France,48.8397623,2.3235324
+2259152797702,Best Western Plus Hotel Blue Square,NL,Amsterdam,Slotermeerlaan 80 Geuzenveld Slotermeer 1064 HD Amsterdam Netherlands,52.3786823,4.8207833
+2267742732290,Club Quarters Hotel St Paul s,GB,London,24 Ludgate Hill City of London London EC4M 7DR United Kingdom,51.5139298,-0.101126
+2267742732295,Club Quarters Hotel Gracechurch,GB,London,7 Gracechurch Street City of London London EC3V 0DR United Kingdom,51.5127964,-0.0847973
+2267742732297,Ten Manchester Street Hotel,GB,London,8 12 Manchester Street Westminster Borough London W1U 4DG United Kingdom,51.5188,-0.153839
+2276332666881,H tel Balzac,FR,Paris,6 rue Balzac 8th arr 75008 Paris France,48.8732785,2.3004174
+2284922601473,Le Relais Madeleine,FR,Paris,11bis Rue Godot de Mauroy 9th arr 75009 Paris France,48.870961,2.3267678
+2284922601478,Mercure Hotel Amsterdam West,NL,Amsterdam,Oude Haagseweg 20 Slotervaart 1066 BW Amsterdam Netherlands,52.3375677,4.8178172
+2293512536064,The Kensington Hotel,GB,London,109 113 Queen s Gate Kensington and Chelsea London SW7 5LR United Kingdom,51.4925478,-0.1780611
+2293512536071,Steigenberger Hotel Herrenhof,AT,Vienna,Herrengasse 10 01 Innere Stadt 1010 Vienna Austria,48.2097958,16.3658705
+2302102470656,Park International Hotel,GB,London,117 129 Cromwell Road Kensington and Chelsea London SW7 4DS United Kingdom,51.4945144,-0.1866172
+2302102470665,Majestic Hotel Spa Barcelona GL,ES,Barcelona,Passeig de Gracia 68 Eixample 08007 Barcelona Spain,41.3935179,2.1639813
+2310692405250,Ibis Styles Paris Gare Saint Lazare,FR,Paris,9 Rue de Constantinople 8th arr 75008 Paris France,48.8796596,2.3209155
+2310692405257,Catalonia Rigoletto,ES,Barcelona,Sabino de Arana 22 24 Les Corts 08028 Barcelona Spain,41.385817,2.1256789
+2319282339842,H tel Thoumieux,FR,Paris,79 rue Saint Dominique 7th arr 75007 Paris France,48.8595985,2.3088076
+2319282339847,Style Hotel,IT,Milan,Via delle Erbe 1 Milan City Center 20121 Milan Italy,45.4708973,9.1840992
+2327872274434,The Connaught,GB,London,Carlos Place Westminster Borough London W1K 2AL United Kingdom,51.5101556,-0.1496314
+2336462209024,Mercure Paris Montparnasse Raspail,FR,Paris,207 Boulevard Raspail 14th arr 75014 Paris France,48.8412131,2.3302954
+2336462209025,K K H tel Cayr Saint Germain des Pr s,FR,Paris,4 Boulevard Raspail 7th arr 75007 Paris France,48.8553117,2.3254628
+2336462209030,Catalonia Passeig de Gr cia 4 Sup,ES,Barcelona,Gran Via de les Corts Catalanes 644 Eixample 08007 Barcelona Spain,41.3901396,2.1696699
+2345052143616,Splendid Etoile,FR,Paris,1 Avenue Carnot 17th arr 75017 Paris France,48.874707,2.2936761
+2345052143621,The Chelsea Harbour Hotel,GB,London,Chelsea Harbour Hammersmith and Fulham London SW10 0XG United Kingdom,51.4756558,-0.1813888
+2353642078208,H tel des Champs Elys es,FR,Paris,2 Rue d Artois 8th arr 75008 Paris France,48.8722884,2.3090359
+2362232012801,Hotel Parc Saint Severin Esprit de France,FR,Paris,22 Rue de La Parcheminerie 5th arr 75005 Paris France,48.8518584,2.3447798
+2362232012806,ME Milan Il Duca,IT,Milan,Piazza della Repubblica 13 Central Station 20124 Milan Italy,45.4793852,9.1961308
+2370821947393,The Academy,GB,London,21 Gower Street Camden London WC1E 6HG United Kingdom,51.5205441,-0.1308091
+2370821947397,Park Hyatt Paris Vendome,FR,Paris,5 rue de la Paix 2nd arr 75002 Paris France,48.8688155,2.3305236
+2370821947402,ADI Doria Grand Hotel,IT,Milan,Viale Andrea Doria 22 Central Station 20124 Milan Italy,45.4853717,9.2115837
+2379411881989,Holiday Inn London Bloomsbury,GB,London,Coram Street Camden London WC1N 1HT United Kingdom,51.5241248,-0.1258066
+2388001816577,Lansbury Heritage Hotel,GB,London,117 Poplar High Street Tower Hamlets London E14 0AE United Kingdom,51.5090985,-0.0157302
+2388001816582,Eurostars Grand Marina Hotel GL,ES,Barcelona,Moll de Barcelona WTC Ciutat Vella 08039 Barcelona Spain,41.371308,2.181698
+2396591751170,DoubleTree by Hilton Hotel London Marble Arch,GB,London,4 Bryanston St Marble Arch Westminster Borough London W1H 7BY United Kingdom,51.514573,-0.15666
+2396591751175,Amba Hotel Charing Cross,GB,London,The Strand Westminster Borough London WC2N 5HX United Kingdom,51.508236,-0.1261963
+2405181685764,Hotel Manin,IT,Milan,Via Manin 7 Milan City Center 20121 Milan Italy,45.4739801,9.1960671
+2413771620354,Hilton London Angel Islington,GB,London,53 Upper Street Islington London N1 0UY United Kingdom,51.5360906,-0.1048176
+2422361554944,Shepherd s Bush Boutique Hotel,GB,London,11 12 Poplar Mews Shepherd s Bush Hammersmith and Fulham London W12 7JS United Kingdom,51.5054544,-0.2262216
+2422361554945,Charlotte Street Hotel,GB,London,15 17 Charlotte Street Hotel Westminster Borough London W1T 1RJ United Kingdom,51.5184158,-0.1348509
+2422361554950,The Student Hotel Amsterdam City,NL,Amsterdam,Wibautstraat 129 Oost 1091 GL Amsterdam Netherlands,52.3546649,4.9131641
+2430951489540,Snob Hotel by Elegancia,FR,Paris,86 Rue Saint Denis 1st arr 75001 Paris France,48.8622723,2.3495707
+2439541424129,H tel Cristal Champs Elys es,FR,Paris,9 Rue de Washington 8th arr 75008 Paris France,48.8726814,2.3020866
+2448131358722,Melia White House Hotel,GB,Fitzrovia,Albany Street London NW1 3UP United Kingdom,51.5298597,-0.1444623
+2448131358726,Hotel Michelangelo,IT,Milan,Piazza Luigi di Savoia 6 Central Station 20124 Milan Italy,45.4845143,9.2057532
+2465311227905,Pullman Barcelona Skipper,ES,Barcelona,Avenida Litoral 10 Ciutat Vella 08005 Barcelona Spain,41.3860183,2.19473
+2473901162497,Rafayel Hotel Spa,GB,London,34 Lombard Road Battersea London SW11 3RF United Kingdom,51.4703604,-0.1779869
+2473901162499,Hotel Corvinus,AT,Vienna,Mariahilfer Stra e 57 59 06 Mariahilf 1060 Vienna Austria,48.1990335,16.3525051
+2482491097089,H tel Hor,FR,Paris,160 Rue La Fayette 10th arr 75010 Paris France,48.8793427,2.3577745
+2482491097094,Grosvenor House A JW Marriott Hotel,GB,London,Park Lane Westminster Borough London W1K 7TN United Kingdom,51.5082019,-0.1545589
+2491081031680,Novotel London Tower Bridge,GB,London,10 Pepys Street City of London London EC3N 2NR United Kingdom,51.5106538,-0.0773676
+2499670966272,Paris Marriott Rive Gauche Hotel,FR,Paris,17 Boulevard Saint Jacques 14th arr 75014 Paris France,48.8315962,2.3399796
+2499670966277,InterContinental Paris Avenue Marceau,FR,Paris,64 Avenue Marceau 8th arr 75008 Paris France,48.8706373,2.2982095
+2508260900864,The Montague On The Gardens,GB,London,15 Montague St Bloomsbury Camden London WC1B 5BJ United Kingdom,51.520181,-0.1256957
+2508260900869,Rainers Hotel Vienna,AT,Vienna,Gudrunstra e 184 10 Favoriten 1100 Vienna Austria,48.1791893,16.3625367
+2525440770048,Sofitel Paris Arc De Triomphe,FR,Paris,14 Rue Beaujon 8th arr 75008 Paris France,48.8751845,2.3013214
+2525440770053,The Lanesborough,GB,London,Hyde Park Corner Westminster Borough London SW1X 7TA United Kingdom,51.50303,-0.15242
+2534030704643,Hotel Gallitzinberg,AT,Vienna,Johann Staud Stra e 32 16 Ottakring 1160 Vienna Austria,48.2145071,16.2845042
+2534030704648,Four Seasons Hotel Milano,IT,Milan,Via Ges 6 8 Milan City Center 20121 Milan Italy,45.469339,9.195108
+2542620639235,Dutch Design Hotel Artemis,NL,Amsterdam,John M Keynesplein 2 Slotervaart 1066 EP Amsterdam Netherlands,52.3417894,4.824952
+2551210573826,Hotel Louis 2,FR,Paris,2 Rue Saint Sulpice 6th arr 75006 Paris France,48.8516148,2.3381293
+2551210573831,The Guesthouse Vienna,AT,Vienna,F hrichgasse 10 01 Innere Stadt 1010 Vienna Austria,48.2051299,16.369036
+2551210573834,Mercure Hotel Raphael Wien,AT,Vienna,Wallgasse 23 06 Mariahilf 1060 Vienna Austria,48.1919288,16.3391395
+2559800508420,ADI Hotel Poliziano Fiera,IT,Milan,Via Poliziano 11 Sempione 20154 Milan Italy,45.4837173,9.1649371
+2568390443012,Hotel du Collectionneur Arc de Triomphe,FR,Paris,51 57 rue de Courcelles 8th arr 75008 Paris France,48.8769204,2.3069132
+2568390443015,Thistle Holborn The Kingsley,GB,London,Bloomsbury Way Camden London WC1A 2SD United Kingdom,51.5179659,-0.1234343
+2576980377602,Hotel mbit Barcelona,ES,Barcelona,Roger de Ll ria 17 Eixample 08010 Barcelona Spain,41.3907821,2.1717426
+2585570312196,The Lodge Hotel Putney,GB,London,52 54 Upper Richmond Road Wandsworth London SW15 2RN United Kingdom,51.4572991,-0.2055425
+2585570312199,The Harmonie Vienna,AT,Vienna,Harmoniegasse 5 7 09 Alsergrund 1090 Vienna Austria,48.2199427,16.3598984
+2594160246786,Hotel de Nell,FR,Paris,7 9 rue du Conservatoire 9th arr 75009 Paris France,48.8732788,2.3466576
+2602750181377,Novotel Paris Centre Gare Montparnasse,FR,Paris,17 Rue Du Cotentin 15th arr 75015 Paris France,48.838484,2.3150904
+2602750181379,Blakes Hotel,GB,London,33 Roland Gardens Kensington and Chelsea London SW7 3PF United Kingdom,51.4892447,-0.1803196
+2602750181384,Cram,ES,Barcelona,Aribau 54 Eixample 08011 Barcelona Spain,41.3880549,2.1599602
+2611340115969,Edouard 7 Paris Op ra,FR,Paris,39 Avenue de l Op ra 2nd arr 75002 Paris France,48.8683133,2.3330851
+2611340115971,The Capital,GB,London,Basil Street Knightsbridge Kensington and Chelsea London SW3 1AT United Kingdom,51.4997486,-0.1615242
+2619930050561,Hotel Arts Barcelona,ES,Barcelona,Marina 19 21 08005 Barcelona Spain,41.3865424,2.1969665
+2628519985156,Boutique H tel Konfidentiel,FR,Paris,64 Rue de l Arbre Sec 1st arr 75001 Paris France,48.8612535,2.3426256
+2628519985160,Durrants Hotel,GB,London,George Street Westminster Borough London W1H 5BJ United Kingdom,51.5179386,-0.1529794
+2637109919747,Melia Barcelona Sarri,ES,Barcelona,Avenida Sarri 50 Les Corts 08029 Barcelona Spain,41.391058,2.141706
+2645699854338,Holiday Inn Paris Elys es,FR,Paris,24 Rue De Miromesnil 8th arr 75008 Paris France,48.8730437,2.3161144
+2654289788928,Crowne Plaza London The City,GB,London,19 New Bridge Street City of London London EC4V 6DB United Kingdom,51.5122429,-0.1045036
+2662879723521,Mercure Paris 19 Philharmonie La Villette,FR,Paris,216 Avenue Jean Jaures 19th arr 75019 Paris France,48.8886969,2.3945403
+2662879723526,Hotel SB Diagonal Zero Barcelona 4 Sup,ES,Barcelona,Pla a de Llevant s n Sant Mart 08019 Barcelona Spain,41.4111652,2.2192012
+2671469658113,Hotel Montalembert,FR,Paris,3 Rue de Montalembert 7th arr 75007 Paris France,48.8567042,2.3277805
+2680059592706,Grange City Hotel,GB,London,Coopers Row City of London London EC3N 2BQ United Kingdom,51.5110114,-0.0771251
+2688649527299,Royal Garden Champs Elysees,FR,Paris,218 220 rue du Faubourg St Honor 8th arr 75008 Paris France,48.8757155,2.3038781
+2688649527304,Great Northern Hotel A Tribute Portfolio Hotel London,GB,London,King s Cross St Pancras International Station Pancras Road Camden London N1C 4TB United Kingdom,51.531427,-0.126133
+2697239461891,H tel Original Paris,FR,Paris,8 Boulevard Beaumarchais 11th arr 75011 Paris France,48.8546989,2.3691899
+2705829396481,Dukes Hotel,GB,London,35 St James s Place Westminster Borough London SW1A 1NY United Kingdom,51.5055381,-0.1396885
+2705829396486,Best Western Premier Hotel Couture,NL,Amsterdam,Delflandlaan 15 Slotervaart 1062 EA Amsterdam Netherlands,52.3511137,4.8411629
+2723009265665,The Hari London,GB,London,20 Chesham Place Kensington and Chelsea London SW1X 8HQ United Kingdom,51.4973203,-0.1562558
+2723009265670,BEST WESTERN PLUS Amedia Wien,AT,Vienna,Landstra er Hauptstra e 155 03 Landstra e 1030 Vienna Austria,48.1923791,16.3994512
+2731599200258,Hotel Roemer Amsterdam,NL,Amsterdam,Roemer Visscherstraat 8 10 Oud West 1054 EV Amsterdam Netherlands,52.3617577,4.8780052
+2740189134850,H tel Raphael,FR,Paris,17 Avenue Kl ber 16th arr 75016 Paris France,48.8713239,2.2937849
+2748779069440,Holiday Inn London Stratford City,GB,London,10a Chestnut Plaza Westfield Stratford City Olympic Park Newham London E20 1GL United Kingdom,51.5426054,-0.0072708
+2748779069442,H tel Pont Royal,FR,Paris,5 7 Rue De Montalembert 7th arr 75007 Paris France,48.8565629,2.3273623
+2757369004032,Kensington House Hotel,GB,London,15 16 Prince Of Wales Terrace Kensington and Chelsea London W8 5PQ United Kingdom,51.5012329,-0.1859937
+2765958938625,Park Plaza London Riverbank,GB,London,18 Albert Embankment Lambeth London SE1 7TJ United Kingdom,51.4913737,-0.1214194
+2765958938629,Catalonia Born,ES,Barcelona,Rec Comtal 16 18 Ciutat Vella 08003 Barcelona Spain,41.3896916,2.1798661
+2774548873218,Eccleston Square Hotel,GB,London,37 Eccleston Square Westminster Borough London SW1V 1PB United Kingdom,51.4911924,-0.1449474
+2783138807812,Arion Cityhotel Vienna und Appartements,AT,Vienna,Hintschiggasse 1 10 Favoriten 1100 Vienna Austria,48.1585332,16.3451115
+2791728742400,Mill sime H tel,FR,Paris,15 Rue Jacob 6th arr 75006 Paris France,48.8550236,2.3350786
+2800318676993,Pullman Paris Montparnasse,FR,Paris,19 Rue du Commandant Ren Mouchotte 14th arr 75014 Paris France,48.8382943,2.3210421
+2800318676998,Hotel Park Villa,AT,Vienna,Hasenauerstra e 12 19 D bling 1190 Vienna Austria,NA,NA
+2808908611585,H tel Le Marianne,FR,Paris,11 rue Paul Baudry 8th arr 75008 Paris France,48.8725794,2.3075779
+2817498546178,Rathbone,GB,London,30 Rathbone Street West End Westminster Borough London W1T 1LB United Kingdom,51.5186801,-0.1354055
+2817498546183,Golden Tulip Amsterdam Riverside,NL,Amsterdam,Provincialeweg 38 Zuidoost 1108 AB Amsterdam Netherlands,52.3154533,4.9962997
+2826088480769,Paris Marriott Champs Elysees Hotel,FR,Paris,70 avenue des Champs Elysees 8th arr 75008 Paris France,48.8711365,2.3050482
+2826088480774,Claris Hotel Spa GL,ES,Barcelona,Pau Claris 150 Eixample 08009 Barcelona Spain,41.3944848,2.1651078
+2834678415360,H tel des Ducs D Anjou,FR,Paris,1 Rue Sainte Opportune 1st arr 75001 Paris France,48.8598229,2.347111
+2834678415362,H tel Gustave,FR,Paris,34 Rue Viala 15th arr 75015 Paris France,48.8502052,2.289043
+2834678415367,Hotel Schani Wien,AT,Vienna,Karl Popper Stra e 22 10 Favoriten 1100 Vienna Austria,48.1824271,16.3808291
+2843268349956,IH Hotels Milano Lorenteggio,IT,Milan,Via Lorenteggio 278 Lorenteggio 20152 Milan Italy,45.4436132,9.1161094
+2851858284548,The Rockwell,GB,London,181 Cromwell Road Kensington and Chelsea London SW5 0SF United Kingdom,51.4948059,-0.1926525
+2851858284553,Gainsborough Hotel,GB,London,7 11 Queensberry Place Kensington and Chelsea London SW7 2DL United Kingdom,51.4948416,-0.1772056
+2869038153728,TRYP Paris Op ra,FR,Paris,3 Boulevard Montmartre 2nd arr 75002 Paris France,48.8713619,2.3426375
+2869038153733,Austria Trend Hotel Astoria Wien,AT,Vienna,K rntner Stra e 32 34 01 Innere Stadt 1010 Vienna Austria,48.2044655,16.3702399
+2877628088322,The Square Milano Duomo,IT,Milan,Via Albricci 2 4 Milan City Center 20122 Milan Italy,45.4608604,9.1890215
+2886218022914,Hotel Boltzmann,AT,Vienna,Boltzmanngasse 8 09 Alsergrund 1090 Vienna Austria,48.2216779,16.3567111
+2894807957505,Mercure Paris Montmartre Sacr Coeur,FR,Paris,3 Rue Caulaincourt 18th arr 75018 Paris France,48.8852794,2.3301021
+2894807957507,DoubleTree by Hilton London Chelsea,GB,London,Imperial Road Hammersmith and Fulham London SW6 2GA United Kingdom,51.475172,-0.1870629
+2911987826689,H tel Square Louvois,FR,Paris,12 Rue de Louvois 2nd arr 75002 Paris France,48.8684165,2.336869
+2911987826694,Hotel Milano Scala,IT,Milan,Via dell Orso 7 Milan City Center 20121 Milan Italy,45.4689376,9.1868891
+2920577761283,H tel Baume,FR,Paris,7 rue Casimir Delavigne 6th arr 75006 Paris France,48.8501522,2.3392782
+2929167695873,The Gore Hotel Starhotels Collezione,GB,London,190 Queen s Gate Kensington and Chelsea London SW7 5EX United Kingdom,51.5001979,-0.1795357
+2937757630466,Novotel London Wembley,GB,London,5 Olympic Way Wembley Brent London HA9 0NP United Kingdom,51.5611271,-0.2787261
+2946347565058,Les Matins de Paris Spa,FR,Paris,3 rue Clauzel 9th arr 75009 Paris France,48.878932,2.3394182
+2954937499650,Sansi Diputacio,ES,Barcelona,234 Diputacio Eixample 08007 Barcelona Spain,41.3882234,2.1644551
+2954937499654,Shaftesbury Suites London Marble Arch,GB,London,41 Great Cumberland Place Westminster Borough London W1H 7LG United Kingdom,51.515755,-0.1603335
+2954937499659,Hotel Tiziano Park Vita Parcour Gruppo MiniHotels,IT,Milan,Via Tiziano 6 Fiera Milano City 20145 Milan Italy,45.4709657,9.1566242
+2972117368833,Mercure Paris Gobelins Place d Italie,FR,Paris,8 bis Avenue de la Soeur Rosalie 13th arr 75013 Paris France,48.8321231,2.3536172
+2980707303426,Le Pavillon de la Reine Spa,FR,Paris,28 place des Vosges 3rd arr 75003 Paris France,48.8562725,2.3660412
+2980707303430,Hotel Okura Amsterdam,NL,Amsterdam,Ferdinand Bolstraat 333 Oud Zuid 1072 LH Amsterdam Netherlands,52.3487635,4.8938829
+2980707303435,Fletcher Hotel Amsterdam,NL,Amsterdam,Schepenbergweg 50 Zuidoost 1105 AT Amsterdam Netherlands,52.2924567,4.9444338
+2997887172608,Windsor Opera,FR,Paris,10 Rue Gabriel Laumain 10th arr 75010 Paris France,48.8734851,2.3485111
+3006477107200,The Colonnade,GB,London,2 Warrington Crescent Westminster Borough London W9 1ER United Kingdom,51.5243286,-0.1846623
+3006477107205,Bcn Urban Hotels Gran Rosellon,ES,Barcelona,Rosell n 174 176 Eixample 08036 Barcelona Spain,41.4226648,2.1464261
+3023656976384,The Leonard Hotel,GB,London,15 Seymour Street Westminster Borough London W1H 7JW United Kingdom,51.5147071,-0.1578291
+3023656976389,Hotel Maison FL,FR,Paris,6 Rue De La Tour 16th arr 75016 Paris France,48.8396395,2.2663056
+3032246910977,Franklin Roosevelt,FR,Paris,18 rue Clement Marrot 8th arr 75008 Paris France,48.8678432,2.3033075
+3032246910979,Best Western PLUS Epping Forest,GB,London,Epping Forest 30 Oak Hill London IG8 9NY United Kingdom,51.603207,0.010607
+3040836845568,Sofitel Paris Le Faubourg,FR,Paris,15 Rue Boissy d Anglas 8th arr 75008 Paris France,48.868414,2.3213247
+3040836845573,Eurostars Monumental,ES,Barcelona,Consell de Cent 498 500 Eixample 08013 Barcelona Spain,41.4006653,2.1787089
+3049426780161,Pullman London St Pancras,GB,London,100 110 Euston Road Camden London NW1 2AJ United Kingdom,51.5286766,-0.1283489
+3049426780166,Hotel Claridge Paris,FR,Paris,37 rue Fran ois 1er 8th arr 75008 Paris France,48.8684243,2.3036244
+3058016714753,Hazlitt s,GB,London,6 Frith Street Soho Westminster Borough London W1D 3JA United Kingdom,51.5143447,-0.1318157
+3066606649348,H tel Elysees Mermoz,FR,Paris,30 Rue Jean Mermoz 8th arr 75008 Paris France,48.8715079,2.3122259
+3075196583937,citizenM London Bankside,GB,London,20 Lavington Street Southwark London SE1 0NZ United Kingdom,51.5051507,-0.1004724
+3075196583942,Hotel Grums Barcelona,ES,Barcelona,Palaud ries 26 Sants Montju c 08004 Barcelona Spain,41.3727844,2.1721134
+3083786518532,Aloft London Excel,GB,London,One Eastern Gateway Royal Victoria Dock Newham London E16 1FR United Kingdom,51.5083719,0.0355768
+3092376453123,Novotel London Canary Wharf,GB,London,40 Marsh Wall Tower Hamlets London E14 9TP United Kingdom,51.5011704,-0.0232607
+3100966387713,L H tel,FR,Paris,13 rue des Beaux Arts 6th arr 75006 Paris France,48.8562272,2.3351758
+3109556322305,Danubius Hotel Regents Park,GB,London,18 Lodge Road Near Baker Street And Marylebone Westminster Borough London NW8 7JT United Kingdom,51.529257,-0.168358
+3109556322313,Canal House,NL,Amsterdam,Keizersgracht 148 Amsterdam City Center 1015 CX Amsterdam Netherlands,52.3763099,4.8862701
+3118146256899,The Levante Parliament A Design Hotel,AT,Vienna,Auerspergstra e 9 08 Josefstadt 1080 Vienna Austria,48.2083518,16.354532
+3126736191493,Clayton Hotel Chiswick,GB,London,626 Chiswick High St Chiswick London W4 5RY United Kingdom,51.4924184,-0.2784701
+3135326126080,St James Court A Taj Hotel London,GB,London,41 54 Buckingham Gate Westminster Borough London SW1E 6AF United Kingdom,51.4986732,-0.1376867
+3143916060675,Grange Buckingham Hotel,GB,London,39 40 Bedford Place Bloomsbury Camden London WC1B 5JT United Kingdom,51.5196124,-0.1239628
+3143916060680,Hotel Regina,IT,Milan,Via Cesare Correnti 13 Milan City Center 20123 Milan Italy,45.459485,9.179511
+3152505995266,Le Marquis Eiffel,FR,Paris,15 Rue Dupleix 15th arr 75015 Paris France,48.8516619,2.2979395
+3152505995271,Silken Ramblas,ES,Barcelona,Pintor Fortuny 13 Ciutat Vella 08001 Barcelona Spain,41.3830117,2.1700699
+3161095929859,Mercure Paris 17 me Saint Lazare Monceau,FR,Paris,99 Bis Rue De Rome 17th arr 75017 Paris France,48.8837472,2.3186342
+3161095929861,Aparthotel Arai 4 Superior,ES,Barcelona,Avinyo 30 Ciutat Vella 08002 Barcelona Spain,41.3807517,2.1772425
+3169685864449,The Justin James Hotel,GB,London,43 Worple Road Wimbledon London SW19 4JZ United Kingdom,51.4202661,-0.211268
+3178275799040,Crowne Plaza London Kensington,GB,London,100 Cromwell Road Kensington and Chelsea London SW7 4ER United Kingdom,51.495179,-0.183827
+3178275799044,H tel Du Jeu De Paume,FR,Paris,54 Rue Saint Louis En L Ile 4th arr 75004 Paris France,48.8520377,2.3557092
+3178275799049,Hotel Beethoven Wien,AT,Vienna,Papagenogasse 6 06 Mariahilf 1060 Vienna Austria,48.2000165,16.3641802
+3186865733634,La Tremoille Paris,FR,Paris,14 rue de la Tremoille 8th arr 75008 Paris France,48.8668589,2.3028215
+3186865733636,Suites H tel Helzear Champs Elys es,FR,Paris,49 Avenue Marceau 16th arr 75116 Paris France,48.8691399,2.2981024
+3186865733641,Duquesa Suites Barcelona,ES,Barcelona,Pla a Antonio L pez 5 Ciutat Vella 08002 Barcelona Spain,41.3810421,2.1814294
+3195455668227,Courtyard by Marriott Vienna Prater Messe,AT,Vienna,Trabrennstra e 4 02 Leopoldstadt 1020 Vienna Austria,48.2130607,16.4133973
+3204045602819,Le Cinq Codet,FR,Paris,5 rue Louis Codet 7th arr 75007 Paris France,48.8547869,2.3084819
+3204045602824,Ramada Plaza Milano,IT,Milan,Via Stamira D Ancona 27 Distretto Viale Monza 20127 Milan Italy,45.501946,9.2277569
+3212635537413,Starhotels Tourist,IT,Milan,Viale Fulvio Testi 300 Bicocca Zara 20126 Milan Italy,45.5266395,9.2131549
+3221225472004,DoubleTree by Hilton London West End,GB,London,92 Southampton Row Camden London WC1B 4BH United Kingdom,51.5201065,-0.1221393
+3221225472009,Holiday Inn Milan Garibaldi Station,IT,Milan,Via Ugo Bassi 1 A Ang Via C Farini Garibaldi Station 20159 Milan Italy,45.488764,9.183057
+3229815406596,Millennium Copthorne Hotels at Chelsea Football Club,GB,London,Fulham Road Stamford Bridge Hammersmith and Fulham London SW6 1HS United Kingdom,51.481663,-0.1909565
+3238405341188,Corendon Vitality Hotel Amsterdam,NL,Amsterdam,Aletta Jacobslaan 7 Slotervaart 1066 BP Amsterdam Netherlands,52.3466449,4.8310984
+3246995275778,Le G n ral H tel,FR,Paris,5 7 rue Rampon 11th arr 75011 Paris France,48.8662695,2.3668616
+3255585210370,Hotel V Fizeaustraat,NL,Amsterdam,Fizeaustraat 2 Oost 1097 SC Amsterdam Netherlands,52.3451511,4.9252372
+3255585210375,Hotel Raffaello,IT,Milan,Viale Certosa 108 Certosa 20156 Milan Italy,45.494861,9.141551
+3264175144963,Grange Clarendon Hotel,GB,London,34 37 Bedford Place Bloomsbury Camden London WC1B 5JR United Kingdom,51.5197933,-0.1241844
+3272765079552,The Athenaeum,GB,London,116 Piccadilly Westminster Borough London W1J 7BJ United Kingdom,51.504716,-0.1475618
+3272765079554,Uptown Palace,IT,Milan,Via Santa Sofia 10 Milan City Center 20122 Milan Italy,45.4574655,9.1919138
+3289944948736,H tel Victor Hugo Paris Kl ber,FR,Paris,19 Rue Copernic 16th arr 75016 Paris France,48.8690198,2.2891278
+3289944948741,The Stafford London,GB,London,St James s Place Westminster Borough London SW1A 1NJ United Kingdom,51.5059087,-0.1403795
+3298534883332,The Exhibitionist Hotel,GB,London,8 10 Queensberry Place Kensington and Chelsea London SW7 2EA United Kingdom,51.4947754,-0.177789
+3307124817923,The Hoxton Shoreditch,GB,London,81 Great Eastern Street Islington London EC2A 3HU United Kingdom,51.5255136,-0.082927
+3315714752517,Best Western Hotel St George,IT,Milan,Viale Tunisia 9 Central Station 20124 Milan Italy,45.4770906,9.2054208
+3324304687108,Sercotel Amister Art Hotel Barcelona,ES,Barcelona,Avenida Roma 93 95 Eixample 08029 Barcelona Spain,41.3844072,2.1514584
+3324304687113,Milan Suite Hotel,IT,Milan,Via Varesina 124 Certosa 20156 Milan Italy,45.5000245,9.1428722
+3332894621696,Montcalm Royal London House City of London,GB,London,22 25 Finsbury Square City Islington London EC2A 1DX United Kingdom,51.5218066,-0.0856081
+3332894621701,Simm s Hotel,AT,Vienna,Simmeringer Hauptstra e 55 57 11 Simmering 1110 Vienna Austria,48.1790835,16.4116997
+3341484556292,Hotel Rathaus Wein Design,AT,Vienna,Lange Gasse 13 08 Josefstadt 1080 Vienna Austria,48.2075294,16.3525967
+3350074490884,InterContinental Wien,AT,Vienna,Johannesgasse 28 03 Landstra e 1030 Vienna Austria,48.2019865,16.3789934
+3358664425475,Conrad London St James,GB,London,22 28 Broadway Westminster Borough London SW1H 0BH United Kingdom,51.4993927,-0.1329128
+3358664425480,Hotel Mediolanum,IT,Milan,Via Mauro Macchi 1 Central Station 20124 Milan Italy,45.4813423,9.2039494
+3367254360068,JUFA Hotel Wien,AT,Vienna,Mautner Markhof Gasse 50 11 Simmering 1110 Vienna Austria,48.1756283,16.4200957
+3375844294661,Best Western Ducs de Bourgogne,FR,Paris,19 Rue Du Pont Neuf 1st arr 75001 Paris France,48.8603483,2.3440535
+3375844294666,MiHotel,IT,Milan,Via Dei Fontanili 26 Ripamonti Corvetto 20141 Milan Italy,45.4405621,9.1921165
+3384434229252,K K Hotel Maria Theresia,AT,Vienna,Kirchberggasse 6 07 Neubau 1070 Vienna Austria,48.2031622,16.3561999
+3393024163840,Shangri La Hotel Paris,FR,Paris,10 Avenue D I na 16th arr 75016 Paris France,48.8637135,2.2934759
+3393024163845,Hotel De Hallen,NL,Amsterdam,Bellamyplein 47 Oud West 1053 AT Amsterdam Netherlands,52.3677568,4.8682174
+3393024163852,LaGare Hotel Milano Centrale MGallery by Sofitel,IT,Milan,Via Gian Battista Pirelli 20 Central Station 20124 Milan Italy,45.484237,9.198858
+3401614098435,H tel de La Tamise Esprit de France,FR,Paris,4 rue d Alger 1st arr 75001 Paris France,48.8648656,2.3295756
+3410204033024,Britannia International Hotel Canary Wharf,GB,London,163 Marsh Wall Docklands Tower Hamlets London E14 9SJ United Kingdom,51.5019097,-0.0232208
+3418793967616,Radisson Blu Edwardian Grafton,GB,London,130 Tottenham Court Road Camden London W1T 5AY United Kingdom,51.5241386,-0.1380807
+3418793967621,Room Mate Anna,ES,Barcelona,Carrer de Arag 271 Eixample 08007 Barcelona Spain,41.3929366,2.1653954
+3418793967622,Worldhotel Cristoforo Colombo,IT,Milan,Corso Buenos Aires 3 Milan City Center 20124 Milan Italy,45.4758842,9.205791
+3418793967627,The Hub Hotel,IT,Milan,Via Privata Polonia 10 20157 Milan Italy,45.5138582,9.1194759
+3427383902212,Hotel de France Wien,AT,Vienna,Schottenring 3 01 Innere Stadt 1010 Vienna Austria,48.2146623,16.3627994
